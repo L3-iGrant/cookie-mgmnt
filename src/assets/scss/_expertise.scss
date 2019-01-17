@@ -1,0 +1,115 @@
+.expertise {
+    background: url(../images/backgrounds/bg-expertise.jpg) no-repeat center center;
+
+    .section-heading{
+        h1, p{
+            color: #ffffff;
+        }
+    }
+
+    .section-heading::after{
+        background-color: white;
+    }
+
+    .expertise-description {
+        margin-bottom: 25px;
+
+        @media only screen and (max-width: 767px) {
+            margin-bottom: 35px;
+        }
+    }
+
+    .nav-tabs {
+        border-bottom: 0;
+
+        & > li{
+            & > a{
+                margin-right: 4px;
+                border: 0;
+                border-radius: 0;
+                border-bottom: 2px solid rgba(227, 225, 225, 0);
+                color: #fdfdfd;
+                font-weight: 400;
+                text-transform: uppercase;
+                transition: all 0.3s;
+
+                &:hover{
+                    border-bottom-color: #e3e1e1;
+                }
+            }
+            &.active{
+                & > a{
+                    &, &:focus, &:hover{
+                        color: #fdfdfd;
+                        background: none;
+                        border: 0;
+                        border-bottom: 2px solid #e3e1e1;
+                    }
+                }
+            }
+        }
+    }
+
+    .tab-content {
+        margin-top: 10px;
+        padding: 10px;
+        color: #E3E1E1;
+
+        p {
+            color: #fff;
+        }
+
+        .tab-left {
+          float: left;
+          margin-right: 20px;
+        }
+        
+        .tab-right {
+          padding-right: 40px;
+            @media only screen and (max-width: 767px) {
+                padding-right: 0;
+            }
+        }
+    }
+
+    
+    .nav{
+        & > li{
+            & > a{
+               &:focus, &:hover{
+                    text-decoration: none;
+                    background-color: #eee;
+                    background: none;
+                }
+            }
+        }
+    }
+
+
+    .progress-heading {
+        color: #ffffff;
+        font-weight: 400;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .progress {
+        background-color: #313131;
+        border-radius: 0;
+        height: 3px;
+    }
+
+    .progress-bar {
+        background-color: #fdfdfd;
+        width: 0;
+        transition: width 3s cubic-bezier(0, 0, 0.2, 1);
+    }
+}
+
+@media (min-width: 992px) {
+    .expertise {
+        .expertise-description {
+            margin-bottom: 0;
+        }
+    }
+}

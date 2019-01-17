@@ -1,0 +1,69 @@
+.pricing {
+    background-color: bg-base-color;
+
+    .price-box {
+        background-color: #f9f9f9;
+        color: #000;
+        text-align: center;
+        padding: 40px 15px 20px;
+        margin-bottom: 25px;
+
+        &.last{
+            @media only screen and (max-width: 767px) {
+                margin-bottom: 0;
+            }
+        }
+
+        h3 {
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            font-size: 18px;
+            margin-top: 0;
+        }
+        .btn-white{
+            border-color: #e3e3e3;
+        }
+
+        .price-info {
+            position: relative;
+            padding: 0 15px 15px;
+            margin-bottom: 25px;
+
+            .price {
+                color: #313131;
+                font-size: 40px;
+                font-weight: 600;
+                margin-bottom: 40px;
+
+                sup {
+                    font-size: 20px;
+                    top: -18px;
+                    left: -2px;
+                }
+            }
+            ul{
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                li {
+                    display: block;
+                    margin-bottom: 25px;
+                }
+
+                .disabled{
+                    color: #c7c7c7;
+                    text-decoration: line-through;
+                }
+            }
+        }
+    }
+
+    .featured{
+        border: 1px solid #000;
+        background-color: #FFF;
+
+        h3{
+            letter-spacing: 10px;
+        }
+    }
+}

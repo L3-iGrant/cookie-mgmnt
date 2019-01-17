@@ -1,0 +1,70 @@
+/**
+* Style for components
+**/
+
+a:focus {
+	outline: none;
+}
+
+.navbar-toggle {
+    border: 0;
+}
+
+.navbar>.container .navbar-brand, 
+.navbar>.container-fluid .navbar-brand {
+	margin-left: 0;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+	background: none;
+}
+
+.alert {
+  padding: 5px 12px;
+  border-radius: 2px;
+}
+.nav-tabs > li > a {
+  border-radius: 2px 2px 0 0;
+  color: #898989;
+}
+
+.panel-heading {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  padding: 0;
+}
+
+.nav-tabs {
+  margin-bottom: 30px;
+}
+
+/* Accordion */
+
+.panel-title {
+  font-size: 14px;
+}
+
+.panel-heading a {
+  position: relative;
+  display: block;
+  letter-spacing: 1px;
+  word-spacing: initial;
+  padding: 10px 15px;
+  &:after {
+    position: absolute;
+    content: "\f106";
+    top: 50%;
+    right: 15px;
+    font-family: "FontAwesome";
+    line-height: 1;
+    font-size: 14px;
+    margin-top: -7px;
+  }
+  &.collapsed:after {
+    content: "\f107";
+  }
+  &:hover, &:focus, &:active{
+    text-decoration: none;
+  }
+}

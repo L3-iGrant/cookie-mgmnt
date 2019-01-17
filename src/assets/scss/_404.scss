@@ -1,0 +1,27 @@
+.four-o-four {
+  display: table;
+  height: 100vh;
+  width: 100%;
+
+  background-image: url(../images/404.jpg);
+  background-size: contain;
+  background-position: 20% center;
+  background-repeat: no-repeat;
+
+  @media (max-width: 991px) {
+    background-position-x: 0;
+  }
+  @media (max-width: 767px){
+    background-image: none;
+    text-align: center;
+  }
+
+  .four-o-four-inner {
+    display: table-cell;
+    vertical-align: middle;
+    h1{
+      font-weight: bold;
+    }
+  }
+
+}

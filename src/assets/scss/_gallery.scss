@@ -1,0 +1,245 @@
+.gallery{
+  //colors
+  $color_alto_approx: #ddd;
+  $color_celeste_approx: #ccc;
+  $color_suva_gray_approx: #888;
+  $color_mine_shaft_approx: #333;
+  $color_mountain_mist_approx: #999;
+
+  //@extend-elements
+  //original selectors
+  //.og-grid li > a, .og-grid li > a img
+  %extend_1 {
+    border: none;
+    outline: none;
+    display: block;
+    position: relative;
+  }
+
+  //original selectors
+  //.og-close::before, .og-close::after
+  %extend_2 {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    height: 1px;
+    background: $color_suva_gray_approx;
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(45deg);
+  }
+
+  //original selectors
+  //.og-fullimg, .og-details
+  %extend_3 {
+    width: 50%;
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+
+  .og-grid {
+    list-style: none;
+    padding: 20px 0;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    li {
+      display: inline-block;
+      vertical-align: top;
+      height: 250px;
+      margin: 10px -2px;
+      width: 33.33%;
+      padding: 10px;
+      @media only screen and (max-width: 767px) {
+        width: 100%;
+      }
+      > a {
+        @extend %extend_1;
+        height: 250px;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      &.og-expanded {
+        margin-bottom: 35px;
+        > a::after {
+          top: auto;
+          border: solid transparent;
+          content: " ";
+          height: 0;
+          width: 0;
+          bottom: -15px;
+          position: absolute;
+          pointer-events: none;
+          border-bottom-color: $color_alto_approx;
+          border-width: 15px;
+          left: 50%;
+          margin: -20px 0 0 -15px;
+        }
+      }
+    }
+
+    &.og-grid-4col{
+      li{
+        width: 25%;
+        @media only screen and (max-width: 767px) {
+          width: 100%;
+        }
+      }
+    }
+    &.og-grid-5col{
+      li{
+        width: 20%;
+        @media only screen and (max-width: 767px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .og-expander {
+    position: absolute;
+    background: $color_alto_approx;
+    top: auto;
+    left: 0;
+    width: 100%;
+    margin-top: 15px;
+    text-align: left;
+    height: 0;
+    overflow: hidden;
+  }
+  .og-expander-inner {
+    padding: 50px 30px;
+    height: 100%;
+  }
+  .og-close {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    &:hover::before {
+      background: $color_mine_shaft_approx;
+    }
+    &:hover::after {
+      background: $color_mine_shaft_approx;
+    }
+  }
+  .og-close::before {
+    @extend %extend_2;
+  }
+  .og-close::after {
+    @extend %extend_2;
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(-45deg);
+  }
+  .og-fullimg {
+    @extend %extend_3;
+    text-align: center;
+    img {
+      display: inline-block;
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+  .og-details {
+    @extend %extend_3;
+    padding: 0 40px 0 20px;
+    h3 {
+      font-weight: 300;
+      font-size: 52px;
+      padding: 40px 0 10px;
+      margin-bottom: 10px;
+    }
+    p {
+      color: $color_mountain_mist_approx;
+    }
+    a {
+      margin: 30px 0 0;
+      outline: none;
+    }
+  }
+  .og-loading {
+    width: 20px;
+    height: 20px;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 50%;
+    background: $color_alto_approx;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 1px $color_celeste_approx, 15px 30px 1px $color_celeste_approx, -15px 30px 1px $color_celeste_approx;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    animation: loader 0.5s infinite ease-in-out both;
+  }
+  @-webkit-keyframes loader {
+    0% {
+      background: $color_alto_approx;
+    }
+    33% {
+      background: $color_celeste_approx;
+      //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      box-shadow: 0 0 1px $color_celeste_approx, 15px 30px 1px $color_celeste_approx, -15px 30px 1px $color_alto_approx;
+    }
+    66% {
+      background: $color_celeste_approx;
+      //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      box-shadow: 0 0 1px $color_celeste_approx, 15px 30px 1px $color_alto_approx, -15px 30px 1px $color_celeste_approx;
+    }
+  }
+  @-moz-keyframes loader {
+    0% {
+      background: $color_alto_approx;
+    }
+    33% {
+      background: $color_celeste_approx;
+      //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      box-shadow: 0 0 1px $color_celeste_approx, 15px 30px 1px $color_celeste_approx, -15px 30px 1px $color_alto_approx;
+    }
+    66% {
+      background: $color_celeste_approx;
+      //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      box-shadow: 0 0 1px $color_celeste_approx, 15px 30px 1px $color_alto_approx, -15px 30px 1px $color_celeste_approx;
+    }
+  }
+  @keyframes loader {
+    0% {
+      background: $color_alto_approx;
+    }
+    33% {
+      background: $color_celeste_approx;
+      //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      box-shadow: 0 0 1px $color_celeste_approx, 15px 30px 1px $color_celeste_approx, -15px 30px 1px $color_alto_approx;
+    }
+    66% {
+      background: $color_celeste_approx;
+      //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      box-shadow: 0 0 1px $color_celeste_approx, 15px 30px 1px $color_alto_approx, -15px 30px 1px $color_celeste_approx;
+    }
+  }
+  @media screen and(max-width: 830px) {
+    .og-expander {
+      h3 {
+        font-size: 32px;
+      }
+      p {
+        font-size: 13px;
+      }
+      a {
+        font-size: 12px;
+      }
+    }
+  }
+  @media screen and(max-width: 650px) {
+    .og-fullimg {
+      display: none;
+    }
+    .og-details {
+      float: none;
+      width: 100%;
+    }
+  }
+}

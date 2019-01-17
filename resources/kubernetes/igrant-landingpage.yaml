@@ -1,0 +1,63 @@
+# kubectl create configmap igrant-landingpage-config-production --from-file config-production.json
+# kubectl create secret tls tls-secret --key igrant_io.key --cert igrant_io_chained.crt
+#
+apiVersion: v1
+kind: Service
+metadata:
+  name: igrant-landingpage-svc
+  labels:
+    app: igrant-landingpage
+spec:
+  type: NodePort
+  ports:
+  - name: http
+    port: 80
+    targetPort: 80
+  selector:
+    app: igrant-landingpage
+---
+
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: igrant-landingpage
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: igrant-landingpage
+    spec:
+      containers:
+      - name: igrant-landingpage
+        image: eu.gcr.io/jenkins-189019/igrant-landingpage:master-20180305185219-b6d0c4a
+        ports:
+        - containerPort: 80
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: igrant-landingpage-ing
+  annotations:
+    kubernetes.io/tls-acme: "true"
+    kubernetes.io/ingress.class: "gce"
+    kubernetes.io/ingress.allow-http: "false"
+
+spec:
+  tls:
+  - hosts:
+    - igrant.io
+    secretName: tls-secret
+
+  rules:
+  - host: igrant.io
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: igrant-landingpage-svc
+          servicePort: 80
+      - path: /*
+        backend:
+          serviceName: igrant-landingpage-svc
+          servicePort: 80

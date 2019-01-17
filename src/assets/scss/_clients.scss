@@ -1,0 +1,44 @@
+.clients {
+    background: black;//url(../images/backgrounds/bg-testimonial.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 60px 0;
+
+    .client-image {
+  		margin-bottom: 20px;
+  		img {
+			opacity: 0.75; 
+		}
+
+		img:hover {
+    		opacity: 1;
+		}
+	}
+
+	.owl-theme .owl-controls {
+    	height: 0px;
+    	margin: 20px 0 -20px 0;
+	}
+}
+
+.client-overlay {
+	position: relative;
+}
+
+.client-overlay::before {
+	content: '';
+	background-color: rgba(48, 48, 48, 0.48);
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+}
+
+@media (min-width: 768px) {
+	.clients {
+		.client-image {
+			margin-bottom: 0;
+		}
+	}
+}

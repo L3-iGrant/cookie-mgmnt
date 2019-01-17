@@ -1,0 +1,159 @@
+.testimonial {
+    background: url(../images/backgrounds/bg-testimonial.jpg) no-repeat center center;
+    color: #fdfdfd;
+    background-size: cover;
+
+    .carosel-wrapper {
+        position: relative;
+
+        @media only screen and (max-width: 767px) {
+            margin-top: 40px;
+        }
+
+        .client-face-holder {
+            position: absolute;
+            width: 106px;
+            height: 106px;
+            overflow: hidden;
+            border-radius: 50%;
+            top: -50px;
+            left: -50px;
+            z-index: 1;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+
+            @media only screen and (max-width: 767px) {
+                left: 50%;
+                margin-left: -53px;
+            }
+
+            #clientFace {
+                height: calc(100% - 6px);
+                position: absolute;
+                width: calc(100% - 6px);
+                background-color: #000;
+                background-image: url(../images/team/team-1.jpg);
+                background-size: cover;
+                background-position-x: center;
+                background-position-y: center;
+                border-radius: 50%;
+                left: 3px;
+                top: 3px;
+                transition:all 0.4s ease-in;
+            }
+        }
+    }
+
+
+    #testimonials-carousel {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 40px 80px 40px 100px;
+
+        @media only screen and (max-width: 767px) {
+            padding: 70px 30px 30px 30px;
+        }
+
+        .review {
+            
+            position: relative;
+        
+            blockquote {
+                border: 0;
+                padding: 0;
+                //font-style: italic;
+                letter-spacing: 1px;
+                font-size: 14px;
+                line-height: 24px;
+            }
+
+            .reviewer {
+                font-weight: 600;
+                color: #FFF;
+                font-size: 20px;
+                margin-bottom: 0px;
+            }
+
+            .designation {
+                text-transform: uppercase;
+                margin: 0;
+                color: #FFF;
+                font-size: 12px;
+                line-height: 16px;
+            }
+        }
+    }
+
+    .quote {
+        font-family: sans-serif;
+        position: absolute;
+        font-size: 100px;
+        font-weight: 100;
+        font-style: italic;
+        z-index: -1;
+        &.left {
+            line-height: 100%;
+            top: 25px;
+            left: 40px;
+
+            @media only screen and (max-width: 767px) {
+                top: 36px;
+                left: 0;
+            }
+        }
+
+        &.right {
+            line-height: 0;
+            bottom: 50px;
+            right: 56px;
+
+        }
+    }
+
+
+    .owl-controls {
+        position: absolute;
+        top: calc(50% - 52px);
+        width: 100%;
+
+        @media only screen and (max-width: 767px) {
+            top: calc(50% - 22px);
+        }
+        
+        a {
+            color: #FFF;
+            font-size: 24px;
+            padding: 40px;
+            line-height: 0;
+            position: absolute;
+
+            &:hover, &:active, &:focus {
+                text-decoration: none;
+            }
+
+
+            @media only screen and (max-width: 767px) {
+                padding: 10px;
+            }
+
+            &.prev {
+                left: -90px;
+                @media only screen and (max-width: 767px) {
+                    left: 0;
+                }
+            }
+            &.next {
+                right: -90px;
+                @media only screen and (max-width: 767px) {
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .testimonial {
+        .review {
+            
+        }
+    }
+}

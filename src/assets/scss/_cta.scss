@@ -1,0 +1,44 @@
+.cta-1 {
+	background-color: #000;
+	.call-to-action {
+	    text-align: center;
+	    color: #fdfdfd;
+	    background-size: contain;
+	    padding: 50px 0;
+
+	    .cta-text {
+	    	color: #fff;
+	    	margin-bottom: 30px;
+  			margin-top: 0;
+  			text-transform: capitalize;
+  			font-size: 22px;
+	    }
+	}
+}
+
+.cta-2 {
+	background-color: #000;
+	padding: 30px 0;
+	.cta-text {
+		color: #fff;
+		margin: 0;
+		line-height: 30px;
+  		margin-right: 30px;
+  		text-transform: capitalize;
+  		font-size: 16px;
+  		letter-spacing: 1px;
+
+  		@media only screen and (max-width: 767px) {
+  			font-size: 13px;
+  			line-height: 20px;
+  			display: block;
+  			margin-right: 0;
+  		}
+	}
+
+	.btn {
+		@media only screen and (max-width: 992px) {
+            margin-top: 15px;
+        }
+	}
+}

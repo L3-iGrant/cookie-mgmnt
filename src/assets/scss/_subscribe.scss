@@ -1,0 +1,103 @@
+.subscribe {
+    background: #000;
+
+    .btn-default{
+        border-color: #ffffff;
+        color: #000;
+    }
+
+    .subscribe-text {
+        padding-left: 60px;
+        position: relative;
+        margin-bottom: 40px;
+
+        h2 {
+            margin-top: 0;
+        }
+
+        h2,span {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+        }
+        span{
+            text-transform: uppercase;
+        }
+    }
+
+    .subscribe-text::before {
+        content: '';
+        border-right: 1px solid #313131;
+        position: absolute;
+        right: 0;
+        top: -15px;
+        bottom: -15px;
+        border-width: 3px;
+        @media only screen and (max-width: 767px) {
+            display: none
+        }
+    }
+
+    .subscribe-text::after {
+        position: absolute;
+        content: "\f003";
+        font-family: FontAwesome;
+        color: #313131;
+        z-index: 1;
+        top: -29px;
+        left: -12px;
+        font-size: 6em;
+        transform: rotate(-50deg);
+    }
+
+    .subscribe-form {
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        .input-group-addon {
+            padding: 0;
+            border: 0;
+            background: rgba(255, 255, 255, 0.9);
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+            transition: background 0.3s;
+            &:hover{
+                background: rgba(255, 255, 255, 0.75);
+            }
+        }
+    }
+
+    .subscribe-form input[type="email"] {
+        background: #FFF;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        box-shadow: none;
+        color: #000000;
+        border-top-left-radius: 2px !important;
+        border-bottom-left-radius: 2px !important;
+    }
+
+    .subscribe-form input[type="submit"] {
+        border: 0;
+        color: #000;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .spam-text {
+        color: rgba(255, 255, 255, 0.9);
+        text-transform: uppercase;
+        font-size: 12px;
+
+        @media only screen and (max-width: 767px) {
+            text-align: center;
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .subscribe {
+        .subscribe-text {
+            margin-bottom: 0;
+        }
+    }
+}

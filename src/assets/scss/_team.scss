@@ -1,0 +1,91 @@
+.team {
+    background-color: bg-base-color;
+
+    .lborder{
+        border-left: 1px solid #dadada;
+        
+        @media only screen and (max-width: 767px) {
+            border-left: none;
+        }
+    }
+    .rborder{
+        border-right: 1px solid #dadada;
+
+        @media only screen and (max-width: 767px) {
+            border-right: none;
+        }
+    }
+
+    .team-bio {
+        margin-bottom: 15px;
+        padding: 0 40px;
+
+        @media only screen and (max-width: 992px) {
+            padding: 0;
+        }
+        @media only screen and (max-width: 767px) {
+            margin-bottom: 45px;
+        }
+
+
+        figure {
+            overflow: hidden;
+            padding: 40px;
+            img {
+                border-radius: 100%;
+            }
+            @media only screen and (max-width: 767px) {
+                padding: 15px 22%;
+            }
+
+        }
+
+        .team-description {
+
+            text-align: center;
+            .member-name{
+                font-size: 20px;
+                text-transform: capitalize;
+                letter-spacing: 1px;
+                margin-bottom: 5px;
+            }
+            .designation{
+                text-transform: uppercase;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .team-social {
+        padding: 15px;
+        padding-bottom: 0;
+    }
+
+    .social-block {
+        margin: 0;
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+
+        li {
+            display: inline-block;
+            margin-right: 10px;
+
+            a {
+                display: block;
+                font-size: 16px;
+                color: #8E8E8E;
+                padding: 2px 8px;
+                transition: all 0.3s;
+
+                &:hover{
+                    color: #000000;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+ 
+}

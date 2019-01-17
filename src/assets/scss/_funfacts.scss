@@ -1,0 +1,45 @@
+.funfacts {
+	background: url(../images/backgrounds/bg-fun-fact.jpg) no-repeat center center;
+	background-size: cover;
+
+	.counter-box {
+		text-align: center;
+
+		@media only screen and (max-width: 767px) {
+			margin-bottom: 35px;
+			&.last{
+				margin-bottom: 0;
+			}
+		}
+
+		.counter-icon span {
+			font-size: 4em;
+			color: #fff;
+		}
+
+		.count{
+			font-size: 24px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			color: #fff;
+			margin-top: 20px;
+  			margin-bottom: 10px;
+
+  			@media only screen and (max-width: 767px) {
+  				margin: 0;
+  			}
+		}
+
+		.count-description {
+			color: #fff;
+			font-size: 15px;
+			margin-top: 15px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+
+			@media only screen and (max-width: 767px) {
+  				margin: 0;
+  			}
+		}
+	}
+}
