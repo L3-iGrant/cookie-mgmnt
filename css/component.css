@@ -162,14 +162,14 @@
 }
 
 .gn-menu-wrapper.gn-open-all {
-		width: 420px
+		width: 390px
 }
 
 .gn-menu-wrapper.gn-open-all .gn-submenu li {
 		height: 60px
 }
 
-@media screen and (max-width: 422px) { 
+@media screen and (max-width: 390px) { 
 	.gn-menu-wrapper.gn-open-all {
 			-webkit-transform: translateX(0px);
 			-moz-transform: translateX(0px);
