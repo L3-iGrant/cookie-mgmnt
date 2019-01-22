@@ -1,0 +1,183 @@
+
+/* Icomoon.com */
+
+
+
+.logo {
+    display: block;
+    max-width: 70%;
+	
+	margin-left: 25px;
+  }
+.logo-bg{
+	background-color: black;
+}
+
+
+
+.gn-menu-main {
+		position: fixed;
+		padding: 1px 10px 20px 20px;
+		bottom:0;
+		left: 0;
+		width: auto;
+		height:20px;
+		font-size: 13px;
+		margin-bottom: 4px;
+		cursor: pointer;
+		margin-top: 0;
+}
+.top-text{
+	
+	margin-left: 15px;
+	margin-bottom: 6px;
+	letter-spacing: 1px;
+	text-decoration: none;
+	color:black;
+	padding-bottom: 10px;
+ 
+}
+.cont{
+	padding-top: 25px;
+}
+.cookie-set{
+	margin-left: 50px;
+	align-content: center;
+	width: auto;
+}
+
+
+.des-text hr { 
+  border-width: 1px;
+  border-color: black;
+  opacity: .2;
+  } 
+
+.des-text{
+	
+	text-align: justify;
+	letter-spacing: .5px;
+	padding-bottom: 10px;
+	
+  }
+
+  .social-plugin{
+	letter-spacing: .5px;
+	text-align: justify;
+  }
+
+ /* toggle  button */
+
+ .switch {
+	position: relative;
+	display: inline-block;
+	margin-top: 20px;
+	width: 55px;
+	height: 20px;
+  }
+  .switch1 {
+	position: relative;
+	display: inline-block;
+	margin-top: 30px;
+	width: 55px;
+	height: 20px;
+  }
+  
+  .switch1 input { 
+	opacity: 0;
+	width: 0;
+	height: 0;
+  }
+  .switch input { 
+	opacity: 0;
+	width: 0;
+	height: 0;
+  }
+  .slide-txt{
+	  margin-left: 4px;
+	  color: white;
+  }
+  .slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+  }
+  
+  .slider:before {
+	position: absolute;
+	content: "";
+	height: 10px;
+	width: 20px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+  }
+  
+  input:checked + .slider {
+	background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+	box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+  }
+  
+
+ /* toggle  button */
+
+/* icon-only trigger (menu item) */
+
+.gn-menu-wrapper {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		overflow: hidden;
+		width: 60px;
+		border-top: 1px solid #c6d0da;
+		background: white;
+		transform: translateX(-60px);
+		transition: transform 0.3s, width 0.3s;
+}
+
+
+.gn-menu-wrapper.gn-open-all,
+.gn-menu-wrapper.gn-open-part {
+		-webkit-transform: translateX(0px);
+		-moz-transform: translateX(0px);
+		transform: translateX(0px);
+}
+
+.gn-menu-wrapper.gn-open-all {
+		width: 420px
+}
+
+.gn-menu-wrapper.gn-open-all .gn-submenu li {
+		height: 60px
+}
+
+@media screen and (max-width: 422px) { 
+	.gn-menu-wrapper.gn-open-all {
+			-webkit-transform: translateX(0px);
+			-moz-transform: translateX(0px);
+			transform: translateX(0px);
+			width: 100%;
+	}
+
+	.gn-menu-wrapper.gn-open-all .gn-scroller {
+			width: 130%
+	}
+}
