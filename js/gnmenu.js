@@ -41,7 +41,7 @@ var privacyCheck=0;
 
 			if( ifmobile=="true" ) {
 				console.log("is mobile")
-				this.trigger.addEventListener( 'click', function(ev) { self._openIconMenu(); } );
+				this.trigger.addEventListener( 'click', function(ev) { checkPrivacy("privacypolicy"); checkAnalytical("_ga");  self._openIconMenu(); } );
 				this.trigger.addEventListener( 'click', function(ev) { self._closeIconMenu(); } );
 				this.save.addEventListener( 'click', function(ev) { 
 					if(analyticCheck==1){ 
@@ -67,6 +67,8 @@ var privacyCheck=0;
 					document.removeEventListener( self.eventtype, self.bodyClickFn );
 				}
 				else {
+					checkPrivacy("privacypolicy");
+					checkAnalytical("_ga");
 					self._openMenu();
 					document.addEventListener( self.eventtype, self.bodyClickFn );
 				}
