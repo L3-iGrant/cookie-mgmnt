@@ -36,7 +36,7 @@ function toggleClass( elem, c ) {
   fn( elem, c );
 }
 
-var classie = {
+var slidebar = {
   // full names
   hasClass: hasClass,
   addClass: addClass,
@@ -51,9 +51,9 @@ var classie = {
 
 if ( typeof define === 'function' && define.amd ) {
   
-  define( classie );
+  define( slidebar );
 } else {
  
-  window.classie = classie;
+  window.slidebar = slidebar;
 }
 })( window );

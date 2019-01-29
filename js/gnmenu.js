@@ -101,23 +101,23 @@ var privacyCheck=0;
 			}
 		},
 		_openIconMenu : function() {
-			classie.add( this.menu, 'gn-open-part' );
+			slidebar.add( this.menu, 'gn-open-part' );
 		},
 		_closeIconMenu : function() {
-			classie.remove( this.menu, 'gn-open-part' );
+			slidebar.remove( this.menu, 'gn-open-part' );
 		},
 		_openMenu : function() {
 			if( this.isMenuOpen ) return;
-			classie.add( this.trigger, 'gn-selected' );
+			slidebar.add( this.trigger, 'gn-selected' );
 			this.isMenuOpen = true;
-			classie.add( this.menu, 'gn-open-all' );
+			slidebar.add( this.menu, 'gn-open-all' );
 			this._closeIconMenu();
 		},
 		_closeMenu : function() {
 			if( !this.isMenuOpen ) return;
-			classie.remove( this.trigger, 'gn-selected' );
+			slidebar.remove( this.trigger, 'gn-selected' );
 			this.isMenuOpen = false;
-			classie.remove( this.menu, 'gn-open-all' );
+			slidebar.remove( this.menu, 'gn-open-all' );
 			this._closeIconMenu();
 			
 		}
