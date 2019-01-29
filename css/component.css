@@ -1,6 +1,16 @@
 
-/* Icomoon.com */
 
+
+/*!
+ * GDPR-cookie - An iGrant.io javascript plugin to manage cookie settings in compliance with EU law
+ *
+ * Description: This file contains the css for the cookie management slide bar. All the slide bar css is present here. 
+ * 
+ * Copyright (c) 2018-2019 LCubed AB
+ *
+ * Author: Anandhu K M
+ *
+ */
 
 #style-3::-webkit-scrollbar-track
 {
@@ -18,11 +28,6 @@
 {
 	background-color: #000000;
 }
-
-
-
-
-
 
 .sidebar-logo {
     display: block;

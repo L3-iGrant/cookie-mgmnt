@@ -1,12 +1,24 @@
-
-
+<!--
+/*!
+ * GDPR-cookie - An iGrant.io javascript plugin to manage cookie settings in compliance with EU law
+ *
+ * Description: This file contains the code which is needed to be copied to the desired page where the cookie consent banner is required.  
+ * 
+ * Copyright (c) 2018-2019 LCubed AB
+ *
+ * Author: Anandhu K M
+ *
+ */
+-->
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/bootstrap.css">
-<script src="js/classie.js"></script>
-<script src="js/gnmenu.js"></script>
+<script src="js/slidebar.js"></script>
+<script src="js/slidebar-main.js"></script>
+
 <link rel="stylesheet" type="text/css" href="css/component.css" />
 
-<body>
+
+<body onload="checkCookies()">
         <!--Begin cookie consent-->
     
 <div class="sidebar" style="max-width:100%;height:auto;">
@@ -90,9 +102,11 @@
                                     <a class="manage"> <button class="btn btn-default btn-round " onclick="addPrivacy()">Manage Cookies</button></a>
                                  <button class="btn btn-default btn-round btnaccept" onclick="acceptall()">
                            Accept</button>  
+                           </div>
+                    </div>
             </div>
             <!-- Call To Action -->
-            </nav>
+        </nav>
         </div>
     </div>
       </div>

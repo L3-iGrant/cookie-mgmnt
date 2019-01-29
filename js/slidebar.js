@@ -1,4 +1,13 @@
-
+/*!
+ * GDPR-cookie - An iGrant.io javascript plugin to manage cookie settings in compliance with EU law
+ *
+ * Description: This file controls the opening and closing of the cookie management slide bar and this functions are called from slidebar-main.js
+ * 
+ * Copyright (c) 2018-2019 LCubed AB
+ *
+ * Author: Anandhu K M
+ *
+ */
 
 ( function( window ) {
 
