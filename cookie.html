@@ -10,98 +10,51 @@
  *
  */
 -->
+<head>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/bootstrap.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/slidebar.js"></script>
 <script src="js/slidebar-main.js"></script>
-
+<script type="text/javascript" src="js/cookie-manager.js"></script>
+<script type="text/javascript" src="js/dynamic.js"></script>
+<script type="text/javascript" src="js/config.js"></script>
 <link rel="stylesheet" type="text/css" href="css/component.css" />
-
-
+</head>
 <body onload="checkCookies()">
         <!--Begin cookie consent-->
-    
 <div class="sidebar" style="max-width:100%;height:auto;">
     <div id="gn-menu" class="gn-menu-main">
-        <a class="gn-icon-menu" onclick="checkPrivacy('privacypolicy')"><button class="btn btn-default btn-round " onclick="checkAnalytical('_ga')" 
+        <a class="gn-icon-menu" ><button class="btn btn-default btn-round "
             style="height:auto;padding:5px 10px;font-size:9px;font-family:'helvetica';color:white;background-color: black;">Cookie Consents</button></a>
         <div id="cookie-sidebar">
         <nav class="gn-menu-wrapper" style="max-width:100%;height:auto;">
-                <div class="col-sm-12" style="padding-top: 25px;">
-                        <div class="social-plugin col-sm-12">
-                            <a href="index.html">iGrant.io </a>uses cookies to remember users and understand ways to enhance their experience. 
-                                Some cookies are essential, others help us improve your experience by providing insights into how the site is used as documented in our 
-                                <a href="privacy.html" >Cookie Policy.</a>
-                                <hr>
-                            </div>
-                  </div>
-            <div class="sidebar-cookie-select col-sm-12">
-              <h4 class="top-text">Manage Cookie Preferences</h4>
-            
-              <div class="col-sm-12 social-plugin">
-                You can set your consent preferences and determine how you want your data to be used based on the purposes below.
-                 Each purpose has a description so that you know how we and/or partners use your data.
+        <div id="cookiebar" class="cookiebar">
+                
             </div>
-            <div class="col-sm-12"><hr></div>
-        </div>
-        <div class="col-sm-12" style="overflow-y:scroll;height: 250px;" id="style-3">
-            <div>
-                <div class="social-plugin col-sm-10 ">
-                    <strong>Analytical Cookies: </strong>provide information about how this site is being used so we can improve the user experience.
-                        Data captured is aggregated and anonymized:
-                    <div style="padding-top:3px;font-size: 10px;">
-                    Cookies Used: Google Analytics
-                    </div> 
+            <div class="col-sm-12">
+                <div class="cookie-set-btn text-right">
+                    <a class="cookie-cancel">  <button class="btn btn-default btn-round">Cancel</button></a>
+                    <a class="cookie-save-button"><button class="btn btn-default btn-round" onclick="saveConsent()">Save</button></a>
                 </div>
-                <div class="toggle text-right" style="padding-top: 18px;">
-                    <label class="switch"> 
-                          <input type="checkbox"  name="analytical_check">
-                          <span class="slider round"><div class="slide-txt">on</div></span>
-                    </label>
+                <div class="powered-by" style="	margin-left:33%;margin-top:20px;">
+                    Powered by <strong>iGrant.io</strong>
                 </div>
             </div>
-          <div class="col-sm-12"><hr></div>
-            <div>
-                <div class="social-plugin col-sm-10">
-                    <strong>Essential Cookies: </strong>are necessary for this site to function properly, authenticating logins, for instance. 
-                        You can only disable essential cookies via browser settings.
-                </div>
-                <div class="toggle text-right" style="padding-top: 18px;" >
-                    <label class="switch"> 
-                        <input type="checkbox"  name="privacy_check">
-                        <span class="slider1 round"><div class="slide-txt">on</div></span>
-                    </label>
-                </div>
-            </div>   
-        </div>
-           <div class="col-sm-12"> <hr> </div>
-        <div class="col-sm-12">
-            <div class="cookie-set-btn text-right">
-                <a class="cookie-cancel">  <button class="btn btn-default btn-round">Cancel</button></a>
-                <a class="cookie-save-button"><button class="btn btn-default btn-round" >Save</button></a>
-            </div>
-            <div class="powered-by" style="	margin-left:33%;margin-top:20px;">
-                Powered by <strong>iGrant.io</strong>
-            </div>
-        </div>
-        </nav>
+        
+    </nav>
 
         <nav id="fixedBottomNav" class="navbar navbar-fixed-bottom" style="display:none;background-color:white;border-top: 1px solid #DFDFDF;" >
             <!-- Call To Action -->
             <div id="cta-4" class="cta-4">
                 <div class="container" style="color:black;font-family: 'Raleway', sans-serif; font-weight: 500;">
-                 <h4 style="margin-left: 15px;margin-bottom: 6px;font-weight:500;">Your data, your choice.</h4>
-                    <div class="col-sm-8 " > 
-                           <a href="index.html"> 
-                            iGrant.io</a> use cookies to enhance your experience on our 
-                            website. By clicking Accept, you are consenting to the use of 
-                            cookies. Please read our  <a href="privacy.html">Cookies Policy</a>  
-                            and our <a href="privacy.html#privacy">Privacy Policy</a> pages for 
-                            details.</div>
+                 <h4 style="margin-left: 15px;margin-bottom: 6px;font-weight:500;"><div id="cookiebannerHeadtag"></div></h4>
+                    <div class="col-sm-8" id="cookiebanner"> 
+                            
+                        </div>
                             <div class="banner-div2 text-right" id="gn-menu" >  
                                     <a class="manage"> <button class="btn btn-default btn-round " onclick="addPrivacy()">Manage Cookies</button></a>
-                                 <button class="btn btn-default btn-round btnaccept" onclick="acceptall()">
-                           Accept</button>  
+                                 <button class="btn btn-default btn-round btnaccept" onclick="acceptall()">Accept</button>  
                            </div>
                     </div>
             </div>
