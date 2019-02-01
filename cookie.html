@@ -11,7 +11,7 @@
  */
 -->
 <head>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/cookieBanner.css">
 <link rel="stylesheet" href="css/bootstrap.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/slidebar.js"></script>
@@ -19,7 +19,7 @@
 <script type="text/javascript" src="js/cookie-manager.js"></script>
 <script type="text/javascript" src="js/dynamic.js"></script>
 <script type="text/javascript" src="js/config.js"></script>
-<link rel="stylesheet" type="text/css" href="css/component.css" />
+<link rel="stylesheet" type="text/css" href="css/cookieSidebar.css" />
 </head>
 <body onload="checkCookies()">
         <!--Begin cookie consent-->
@@ -32,9 +32,11 @@
         <div id="cookiebar" class="cookiebar">
                 
             </div>
+            
             <div class="col-sm-12">
+                <div class="col-sm-12"><hr></div>
                 <div class="cookie-set-btn text-right">
-                    <a class="cookie-cancel">  <button class="btn btn-default btn-round">Cancel</button></a>
+                    <a class="cookie-cancel">  <button class="btn btn-default btn-round"style="margin-right:20px;">Cancel</button></a>
                     <a class="cookie-save-button"><button class="btn btn-default btn-round" onclick="saveConsent()">Save</button></a>
                 </div>
                 <div class="powered-by" style="	margin-left:33%;margin-top:20px;">
@@ -48,13 +50,13 @@
             <!-- Call To Action -->
             <div id="cta-4" class="cta-4">
                 <div class="container" style="color:black;font-family: 'Raleway', sans-serif; font-weight: 500;">
-                 <h4 style="margin-left: 15px;margin-bottom: 6px;font-weight:500;"><div id="cookiebannerHeadtag"></div></h4>
+                 <h4 style="" class="cookiebanner"><div id="cookiebannerHeadtag"></div></h4>
                     <div class="col-sm-8" id="cookiebanner"> 
                             
                         </div>
                             <div class="banner-div2 text-right" id="gn-menu" >  
-                                    <a class="manage"> <button class="btn btn-default btn-round " onclick="addPrivacy()">Manage Cookies</button></a>
-                                 <button class="btn btn-default btn-round btnaccept" onclick="acceptall()">Accept</button>  
+                                    <a class="manage" > <button class="btn btn-default btn-round" style="margin-bottom:10px;"onclick="addPrivacy()">Manage Cookies</button></a>
+                                 <button class="btn btn-default btn-round btnaccept" style="margin-left: 10px;margin-bottom:10px;" onclick="acceptall()">Accept</button>  
                            </div>
                     </div>
             </div>

@@ -1,7 +1,7 @@
 /*!
  * GDPR-cookie - An iGrant.io javascript plugin to manage cookie settings in compliance with EU law
  *
- * Description: This file contains the mouse events of the slide bar and all the functions of cookie management are here. 
+ * Description: This file contains the mouse events of the cookie consent banner and sidebar for mobile and desktop view. 
  * 
  * Copyright (c) 2018-2019 LCubed AB
  *

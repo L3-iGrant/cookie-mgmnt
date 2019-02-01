@@ -10,8 +10,22 @@
   * Author: Anandhu K M
   *
   */
- -->
 
+
+  h4.cookiebanner{
+    font-size: 18px;
+    word-spacing: 3px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-left: 15px;
+    margin-bottom: 6px;
+    font-family: 'Raleway', sans-serif;
+    color: #000000;
+  
+  }
+    @media only screen and (max-width: 992px) {
+      h4.cookiebanner{
+        letter-spacing: 1px; } }
   
   .container {
     position: relative;
@@ -88,7 +102,7 @@
     transition-timing-function: ease-out; }
   
   .btn:hover, .btn:focus, .btn:active {
-    color: white;
+    color: white !important;
     outline: none; }
   
   .btn:hover:before, .btn:focus:before, .btn:active:before {
@@ -176,3 +190,6 @@
       padding: 20px; }
     .navbar-solid .dropdown-toggle:after {
       top: 51%; }
+
+
+      

@@ -1,8 +1,19 @@
 
-var analyticCheck=0;
-var privacyCheck=0;
 
-function analytics(){
+/*!
+ * GDPR-cookie - An iGrant.io javascript plugin to manage cookie settings in compliance with EU law
+ *
+ * Description: This file contains all the functions which creates and deletes cookie.
+ *               
+ *             
+ * Copyright (c) 2018-2019 LCubed AB
+ *
+ * Author: Anandhu K M
+ *
+ */
+
+ 
+function analytics(){ 
 
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -165,7 +176,22 @@ function deleteCookie(name, path, domain) {
 }
 
 
-
+function saveConsent(){
+    console.log("helloooooooooooooooooooo")
+            if(analyticCheck==1){
+                    analytics();
+            }
+            else if(analyticCheck==0){
+                    deletecookie();
+                    if(analyticCheck==0)
+                    document.location.reload(true);
+            }
+            if(privacyCheck==1){
+                    createCookie("PrivacyPolicy","accepted",30)
+            }else if(privacyCheck==0){
+                    //always needed
+            }
+    }
 
 
 

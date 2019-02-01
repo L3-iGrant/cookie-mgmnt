@@ -4,7 +4,7 @@
 /*!
  * GDPR-cookie - An iGrant.io javascript plugin to manage cookie settings in compliance with EU law
  *
- * Description: This file contains the css for the cookie management slide bar. All the slide bar css is present here. 
+ * Description: This file contains the css for the cookie management sidebar. All the sidebar css is present here. 
  * 
  * Copyright (c) 2018-2019 LCubed AB
  *
@@ -177,49 +177,6 @@
 	-webkit-transform: translateX(26px);
 	-ms-transform: translateX(26px);
 	transform: translateX(26px);
-  }
-  
-
-  .slider1 {
-	position: absolute;
-	cursor: pointer;
-	top: 0;
-	left: 0;
-	right: -4px;
-	bottom: 0;
-	background-color: rgba(71, 189, 81, 0.856);
-	-webkit-transition: .4s;
-	transition: .4s;
-  }
-
-  .slider1:before {
-	position: absolute;
-	content: "";
-	height: 20px;
-	width: 20px;
-	left: 30px;
-	bottom: 2px;
-	background-color: white;
-	-webkit-transition: .4s;
-	transition: .4s;
-	}
-	.slider1.round {
-		border-radius: 34px;
-	}
-	
-	.slider1.round:before {
-		border-radius: 50%;
-	}
-  
-  input:checked + .slider1 {
-	background-color: rgba(71, 189, 81, 0.856);
-  }
-  
-  
-  input:checked + .slider1:before {
-	-webkit-transform: translateX(0px);
-	-ms-transform: translateX(0px);
-	transform: translateX(0px);
   }
 
  /* toggle  button */
