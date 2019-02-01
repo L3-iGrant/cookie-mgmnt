@@ -102,7 +102,7 @@
     transition-timing-function: ease-out; }
   
   .btn:hover, .btn:focus, .btn:active {
-    color: white !important;
+    color: white;
     outline: none; }
   
   .btn:hover:before, .btn:focus:before, .btn:active:before {

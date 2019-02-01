@@ -146,6 +146,11 @@
 	transition: .4s;
   }
 
+@media screen and (max-width: 750px){
+  div.cookieUsed{
+	margin-bottom:-40px;
+}
+}
   .slider:before {
 	position: absolute;
 	content: "";
@@ -223,7 +228,7 @@
 			transform: translateX(0px);
 			width: 100%;
 	}
-
+	
 
 	.gn-menu-wrapper.gn-open-all .gn-scroller {
 			width: 130%

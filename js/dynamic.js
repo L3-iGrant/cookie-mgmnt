@@ -35,11 +35,11 @@ var i=0,
                 cookieSidebarText=cookieSidebarText + ' <div>'
                     +' <div class="social-plugin col-sm-10 ">'
                     +'<strong>'+Config.purposes[i].cookietitle+': </strong>'+ Config.purposes[i].description
-                    +' <div style="padding-top:3px;font-size: 10px;">'
+                    +' <div class="cookieUsed" style="padding-top:3px;font-size:10px; ">'
                     +'  Cookies Used: '+Config.purposes[i].purpose
                     +'</div> '
                     +'</div>'
-                    +'<div class="toggle text-right" style="padding-top: 18px;">'
+                    +'<div class="toggle text-right" style="padding-top:10px;">'
                     +'<label class="switch"> '
                     +'<input type="checkbox" class="'+Config.purposes[i].name+'" value="'+Config.purposes[i].required+'"id="'+Config.purposes[i].name+'">'
                     +' <span class="slider round"><div class="slide-txt">on</div></span>'
