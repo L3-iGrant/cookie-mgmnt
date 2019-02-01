@@ -53,7 +53,17 @@
 				console.log("is mobile")
 				this.trigger.addEventListener( 'click', function(ev) { self._openIconMenu(); } );
 				this.trigger.addEventListener( 'click', function(ev) { self._closeIconMenu(); } );
-				this.save.addEventListener( 'click', function(ev) { self._closeMenu(); } );
+				this.save.addEventListener( 'click', function(ev) { self._closeMenu();
+					
+					if(analyticCheck==1){
+						analytics();
+				}
+				else if(analyticCheck==0){
+						deletecookie();
+						if(analyticCheck==0)
+						document.location.reload(true);
+						}
+			 	} );
 				this.cookie_cancel.addEventListener( 'click', function(ev) { self._closeMenu(); } );
 			}
 			else{
@@ -75,6 +85,16 @@
 			this.menu.addEventListener( this.eventtype, function(ev) { ev.stopPropagation(); } );
 
 			this.save.addEventListener( this.eventtype, function(ev) { 
+				
+				if(analyticCheck==1){
+					
+					analytics();
+			}
+			else if(analyticCheck==0){
+					deletecookie();
+					if(analyticCheck==0)
+					document.location.reload(true);
+					}
 				self._closeMenu();
 			} );
 			this.cookie_cancel.addEventListener( this.eventtype, function(ev) { 
