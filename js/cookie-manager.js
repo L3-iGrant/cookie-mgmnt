@@ -195,7 +195,7 @@ function saveConsent(){
 
 
 
-function checkCookies() {
+function checkCookie() {
     var cookietxt=getCookie("PrivacyPolicy");
     if (cookietxt == "accepted") {
           document.getElementById("fixedBottomNav").style.display='none'; 
