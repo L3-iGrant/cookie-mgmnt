@@ -34,22 +34,22 @@ var Config = {
 
         // Purpose 1
         {
-            name : 'EssentialCookies',                      // Each app should have a unique (and short) name.
-            cookietitle : 'Essential Cookies',              // The title of you app as listed in the consent modal.  //description about the cookies app
-            description: 'are necessary for this site to function properly, authenticating logins, for instance. You can only disable essential cookies via browser settings.',
-            purpose : 'Privacy Policy',                     // The purpose(s) of this app. Will be listed on the consent notice.
-            cookies : ['PrivacyPolicy'],                    //cookie that will be created need to be mentioned
-            required:true,                                  // If "required" is set to true,will not allow this app to be disabled by the user.
+            name : 'AnalyticalCookies',                      // Each app should have a unique (and short) name.
+            cookietitle : 'Analytical Cookies',              // The title of you app as listed in the consent modal.  //description about the cookies app
+            description: 'provide information about how this site is being used so we can improve the user experience. Data captured is aggregated and anonymized.',
+            purpose : 'Google Analytics',                     // The purpose(s) of this app. Will be listed on the consent notice.
+            cookies :['_ga' ,'_gid'],                    //cookie that will be created need to be mentioned
+            required:false,                                  // If "required" is set to true,will not allow this app to be disabled by the user.
         },
         
         // Purpose 2
         {
-            name: 'AnalyticalCookies',                                     
-            description: 'provide information about how this site is being used so we can improve the user experience. Data captured is aggregated and anonymized.',                                                  
-            cookietitle: 'Analytical Cookies',                                        
-            purpose : 'Google Analytics',                                         
-            cookies : ['_ga' ,'_gid'],                                       
-            required : false,
+            name: 'EssentialCookies',                                     
+            description: 'are necessary for this site to function properly, authenticating logins, for instance. You can only disable essential cookies via browser settings.',                                                  
+            cookietitle: 'Essential Cookies',                                        
+            purpose : 'Privacy Policy',                                         
+            cookies :  ['PrivacyPolicy'],                                       
+            required : true,
         }
         //if there is more cookie apps used mention it below as new set of elements like above
         
