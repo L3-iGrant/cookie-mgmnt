@@ -23,7 +23,7 @@ All the text and headings can be made of your choice by mentioning it in config 
 | cookiePolicy| Path to the cookie policy file eg.`cookiePolicy.html`|
 | numberOfPurposes| Number of purposes/cookie apps used|
 
-Here the details of Purposes/cookie apps used are filled
+Here the description on how to fill the details of Purposes/cookie apps which are used.
 
 
 | Purpose Variable| Description |
