@@ -1,4 +1,4 @@
-# Cookie Consent Banner
+# Manage Consent Cookies as per IAB/GDPR Transparency and Consent Framework
 
 # Usage
 
