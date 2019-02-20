@@ -51,19 +51,9 @@
 
 			if( ifmobile=="true" ) {
 				console.log("is mobile")
-				this.trigger.addEventListener( 'click', function(ev) { self._openIconMenu(); } );
+				this.trigger.addEventListener( 'click', function(ev) { self._openIconMenu(); vendor_hide();} );
 				this.trigger.addEventListener( 'click', function(ev) { self._closeIconMenu(); } );
-				this.save.addEventListener( 'click', function(ev) { self._closeMenu();
-					
-					if(analyticCheck==1){
-						analytics();
-				}
-				else if(analyticCheck==0){
-						deletecookie();
-						if(analyticCheck==0)
-						document.location.reload(true);
-						}
-			 	} );
+				this.save.addEventListener( 'click', function(ev) { self._closeMenu(); saveConsent();} );
 				this.cookie_cancel.addEventListener( 'click', function(ev) { self._closeMenu(); } );
 			}
 			else{
@@ -76,32 +66,22 @@
 					document.removeEventListener( self.eventtype, self.bodyClickFn );
 				}
 				else {
-					// checkPrivacy("privacypolicy");
-					checkAnalytical("_ga");
+					vendor_hide();
+					vendorActivate();
+					checkAnalytical();
 					self._openMenu();
 					document.addEventListener( self.eventtype, self.bodyClickFn );
 				}
 			} ); 
 			this.menu.addEventListener( this.eventtype, function(ev) { ev.stopPropagation(); } );
 
-			this.save.addEventListener( this.eventtype, function(ev) { 
-				
-				if(analyticCheck==1){
-					
-					analytics();
-			}
-			else if(analyticCheck==0){
-					deletecookie();
-					if(analyticCheck==0)
-					document.location.reload(true);
-					}
-				self._closeMenu();
-			} );
+			this.save.addEventListener( this.eventtype, function(ev) { self._closeMenu(); saveConsent(); } );
 			this.cookie_cancel.addEventListener( this.eventtype, function(ev) { 
 				self._closeMenu();
 			} );
 			this.manage.addEventListener( this.eventtype, function(ev) { 
 				document.getElementById("fixedBottomNav").style.display = 'none';
+				vendorActivate();
 				self._openMenu();
 			} );
 			}

@@ -12,7 +12,9 @@
  *
  */
 
- 
+
+
+
 function analytics(){ 
 
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -20,9 +22,26 @@ function analytics(){
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	   })(window,document,'script','dataLayer','GTM-N4VZD77');
-	   return true;
+       return true;
+       
 }
 
+$.ajax({
+    url: Config.vendor_url,
+    dataType: 'json',
+    async: false,
+    success: function(data) {
+     vendor_list=data;
+    }
+  });
+
+function vendorActivate(){
+
+    if(Config.isVendorRequired == true){
+        document.getElementById("vendor_show_text").style.display="block";
+    }
+
+}
 
 function setCookie(cname,cvalue,exdays) {
   var d = new Date();
@@ -63,20 +82,21 @@ function eraseCookie(name) {
   }
 function cookieAction(q){
 
+
 }
 
-function checkAnalytical(cname){
-    var cook = getCookie(cname);
-    console.log("check analy");
-    console.log(cook);
-    var checkboxAnalytical = document.querySelector('input.AnalyticalCookies');
-    if(cook){
-        checkboxAnalytical.checked=true;
-        analyticCheck=1;
-    }
-    else{
-        checkboxAnalytical.checked=false;
-        analyticCheck=0;
+function checkAnalytical(){
+   
+    for(i=0;i<Config.numberOfPurposes;i++){
+            var is_cookie_present = getCookie(Config.purposes[i].cookies[0]);
+            console.log(is_cookie_present)
+                var checkbox = document.querySelector("input."+Config.purposes[i].name);
+                if(is_cookie_present=="accepted"){
+                    checkbox.checked=true;
+                }
+                else{
+                    checkbox.checked=false;
+                }
     }
 }
 
@@ -91,48 +111,17 @@ document.getElementById("fixedBottomNav").style.display = 'none';
 
 
 function acceptall(){
-	analytics();
-    createCookie("PrivacyPolicy","accepted",30);
+    analytics();
+    for(i=0;i<Config.numberOfPurposes;i++){
+        for(j=0;j<=Config.purposes[i].cookies.length;j++){
+        createCookie(Config.purposes[i].cookies[j],"accepted",30);
+        }
+    }
 	document.getElementById("fixedBottomNav").style.display = 'none';
 }
 
-// document.addEventListener('DOMContentLoaded', function () {
-//     var checkbox = document.querySelector('input[name="analytical_check"]');
-//     var checkbox1 = document.querySelector('input[name="privacy_check"]');
-
-//     checkbox.addEventListener('change', function () {
-//       if (checkbox.checked) {
-//         // do this
-//         analyticCheck=1;
-//         console.log('analytical Checked');
-//         console.log(analyticCheck);
-// 	  } 
-// 	  else {
-//         // do that
-//         analyticCheck=0;
-//         console.log('Not checked');
-//         console.log(analyticCheck);
-//       }
-//     });
-
-//     checkbox1.addEventListener('change', function () {
-//         if (checkbox.checked) {
-//           // do this
-//           privacyCheck=1;
-//           console.log('Privacy Checked');
-//           console.log(privacyCheck);
-//         } else {
-//           // do that
-//           privacyCheck=0;
-//           console.log('Not checked');
-//           console.log(privacyCheck);
-//         }
-//       });
-//   });
-
 function addPrivacy()
 {
- console.log("sidebar");
  cookietxt = "accepted";
  document.getElementById("fixedBottomNav").style.display = 'none';
  if (cookietxt != "" && cookietxt != null) {
@@ -175,25 +164,66 @@ function deleteCookie(name, path, domain) {
     document.cookie = str
 }
 
+function enable_toggles(){
+     
+    for (i=0; i < Config.numberOfPurposes; i++ ) {
+        $("input."+Config.purposes[i].name).prop('checked', true);
+    }
+    document.getElementById("vendor_show_text").style.display="block";
+    document.getElementById("vendor_hide_text").style.display="none";
+    document.getElementById("purposes_scroll").style.display="block";
+    document.getElementById("vendor_list").style.display="none";
+}
+
+function vendor_show(){
+    document.getElementById("purposes_scroll").style.display="none";
+    document.getElementById("vendor_list").style.display="block";
+    document.getElementById("vendor_hide_text").style.display="block";
+    document.getElementById("vendor_show_text").style.display="none";
+    
+}
+
+function vendor_hide(){
+    document.getElementById("vendor_show_text").style.display="block";
+    document.getElementById("vendor_hide_text").style.display="none";
+    document.getElementById("purposes_scroll").style.display="block";
+    document.getElementById("vendor_list").style.display="none";
+}
+
 
 function saveConsent(){
-    console.log("helloooooooooooooooooooo")
-            if(analyticCheck==1){
+
+    for (i=0; i < Config.numberOfPurposes; i++ ) {
+
+           var checkbox=document.querySelector("input."+Config.purposes[i].name);
+           var cookie=Config.purposes[i].cookies[0];
+            if(checkbox.checked==true){
+                createCookie(cookie,"accepted",30)
+                if(cookie=="Analytics"){
                     analytics();
-            }
-            else if(analyticCheck==0){
-                    deletecookie();
-                    if(analyticCheck==0)
-                    document.location.reload(true);
-            }
-            if(privacyCheck==1){
+                    
+                }
+                else if(cookie=="PrivacyPolicy"){
                     createCookie("PrivacyPolicy","accepted",30)
-            }else if(privacyCheck==0){
-                    //always needed
+                }
+            }
+            else if(checkbox.checked==false){
+
+                if(cookie=="Analytics"){
+                    deletecookie();
+                    createCookie(cookie,"declined",30)
+                    location.reload(false);
+                }
+                else if(cookie=="AdSense"){
+
+                    createCookie(cookie,"declined",30)
+
+                }
+                    
             }
     }
 
-
+}
 
 function checkCookie() {
     var cookietxt=getCookie("PrivacyPolicy");
