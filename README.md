@@ -46,8 +46,8 @@ Copy the head scripts from **Cookies.html** to the pages where the Cookie Consen
     <script type="text/javascript" src="cookieconsent/js/cookie-manager.js"></script>
     <link rel="stylesheet" href="cookieconsent/css/cookieBanner.css">
     <link rel="stylesheet" type="text/css" href="cookieconsent/css/cookieSidebar.css" />
-    <script src="cookieconsent/js/slidebar.js"></script>
-    <script src="cookieconsent/js/slidebar-main.js"></script>
+    <script src="cookieconsent/js/sidebar.js"></script>
+    <script src="cookieconsent/js/sidebar-main.js"></script>
 ```
 Put an **onload()** function to the body tag on every page.
 ```html
