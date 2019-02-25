@@ -4,7 +4,7 @@
 
 Download the whole CookieConsent directory and put it the src folder where the index page resides.
 
-Use the config.js file to configure the Cookie consent banner of your chioce.
+Use the config.js file to configure the Cookie consent banner of your choice.
 
 All the text and headings can be made of your choice by mentioning it in config file.
 
