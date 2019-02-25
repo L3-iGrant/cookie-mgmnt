@@ -29,7 +29,7 @@ Here the description on how to fill the details of Purposes/cookie apps which ar
 | Purpose Variable| Description |
 |---|----|
 | name | Each app/purpose should have unique name to be identified |
-| cookititle | Name of the purpose. This will be shown in the manager as purpose title|
+| cookietitle | Name of the purpose. This will be shown in the manager as purpose title|
 | description | Description about the purpose|
 | Purpose | Decribes for what this purpose/app is used. Eg. `Google Analytics`|
 | cookies | Mention which cookies are used for this purpose|
