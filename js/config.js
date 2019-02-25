@@ -36,6 +36,8 @@ var Config = {
             cookies :['Analytics'],                    //cookie that will be created need to be mentioned
             required:false,                                  // If "required" is set to true,will not allow this app to be disabled by the user.
         },
+        
+        // Purpose 2
         {
             name: 'AdSenseCookies',                                     
             description: 'are necessary for this site to function properly, authenticating logins, for instance. You can only disable essential cookies via browser settings.',                                                  
@@ -45,7 +47,7 @@ var Config = {
             required : false,
         },
         
-        // Purpose 2
+        // Purpose 3
         {
             name: 'EssentialCookies',                                     
             description: 'are necessary for this site to function properly, authenticating logins, for instance. You can only disable essential cookies via browser settings.',                                                  
