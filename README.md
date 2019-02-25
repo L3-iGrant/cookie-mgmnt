@@ -75,6 +75,23 @@ navigation buttons and inside the **nav** navigation tag.
 ```
 
 
+**How to Install :**
+
+Download the whole Cookie Consent directory files and put it the “Source/src” folder of your project where the index page resides.
+
+Copy the head scripts from Cookies.html to the pages where the Cookie Consent is required.
+
+Put an onload() function to the body tag on every page.
+  
+Copy body part codes from Cookie.html to the pages where cookie Consent banner is required. 
+
+Place the copied code below the top navigation bar inside the body tag on your page. Be sure to put the code in the same <div> tag of the top navigation bar so that is appears top of every other element in the page. 
+
+Use the config.js file to configure the Cookie consent banner of your own choice.
+
+
+
+
 
 
 
