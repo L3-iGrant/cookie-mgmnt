@@ -12,52 +12,34 @@
  */
 var Config = {
 
-    vendor_url:'https://vendorlist.consensu.org/vendorlist.json',
+    vendor_url:"https://vendorlist.consensu.org/vendorlist.json",
     isVendorRequired :true,
     companyName:'iGrant.io',
     cookieBannerHeader:'YOUR DATA, YOUR CHOICE', 
-    cookieBannerDescription:'use cookies to enhance your experience on our website. By clicking Accept, you are consenting to the use of cookies.',// "Please read our Cookies Policy and Privacy Policy pages for details." this text will be added at the end.
-    cookieConsentSidebarMainText:'use cookies to enhance your experience on our website. By enabling, you are consenting to the use of cookies.',// "Please read our Cookies Policy and Privacy Policy pages for details." this text will be added at the end.
+    cookieBannerDescription:'use cookies to enhance your experience on our website. By clicking Accept, you are consenting to the use of cookies.',
+    cookieConsentSidebarMainText:'use cookies to enhance your experience on our website. By enabling, you are consenting to the use of cookies.',
     cookieConsentSidebarSubTitle:'Manage Cookie Preferences',
     cookieConsentSidebarSubDescription:'You can set your consent preferences based on the purposes below.',
     privacyPolicy: 'privacy.html#privacy', 
     cookiePolicy: 'privacy.html',
-
     numberOfPurposes:3,
+    purpose0_name : 'AnalyticalCookies',                     
+    purpose0_cookietitle : 'Analytical Cookies',             
+    purpose0_description: 'provide information about how this site is being used so we can improve the user experience. Data captured is aggregated and anonymized.',
+    purpose0_purpose : 'Google Analytics',              
+    purpose0_cookies :['Analytics'],                   
+    purpose0_required:false,                                 
+    purpose1_name: 'AdSenseCookies',                                     
+    purpose1_description: 'uses cookies to improve and deliver ads that are relevant to your browsing habits.',                                                  
+    purpose1_cookietitle: 'Advertising Cookies',                                        
+    purpose1_purpose : 'AdSense',                                         
+    purpose1_cookies :  ['AdSense'],                                       
+    purpose1_required : false,
+    purpose2_name: 'EssentialCookies',                                     
+    purpose2_description: 'are necessary for this site to function properly, authenticating logins, for instance. You can only disable essential cookies via browser settings.',                                                  
+    purpose2_cookietitle: 'Essential Cookies',                                        
+    purpose2_purpose : 'Privacy Policy',                                         
+    purpose2_cookies :  ['PrivacyPolicy'],                                       
+    purpose2_required : true,
     
-    purposes: [
-
-        // Purpose 1
-        {
-            name : 'AnalyticalCookies',                      // Each app should have a unique (and short) name.
-            cookietitle : 'Analytical Cookies',              // The title of you app as listed in the consent modal.  //description about the cookies app
-            description: 'provide information about how this site is being used so we can improve the user experience. Data captured is aggregated and anonymized.',
-            purpose : 'Google Analytics',                     // The purpose(s) of this app. Will be listed on the consent notice.
-            cookies :['Analytics'],                    //cookie that will be created need to be mentioned
-            required:false,                                  // If "required" is set to true,will not allow this app to be disabled by the user.
-        },
-        
-        // Purpose 2
-        {
-            name: 'AdSenseCookies',                                     
-            description: 'are necessary for this site to function properly, authenticating logins, for instance. You can only disable essential cookies via browser settings.',                                                  
-            cookietitle: 'Advertising Cookies',                                        
-            purpose : 'AdSense',                                         
-            cookies :  ['AdSense'],                                       
-            required : false,
-        },
-        
-        // Purpose 3
-        {
-            name: 'EssentialCookies',                                     
-            description: 'are necessary for this site to function properly, authenticating logins, for instance. You can only disable essential cookies via browser settings.',                                                  
-            cookietitle: 'Essential Cookies',                                        
-            purpose : 'Privacy Policy',                                         
-            cookies :  ['PrivacyPolicy'],                                       
-            required : true,
-        }
-        
-        //if there is more cookie apps used mention it below as new set of elements like above
-        
-    ]
 }

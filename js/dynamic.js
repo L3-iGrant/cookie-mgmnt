@@ -124,16 +124,23 @@ var i=0,
         +'</div>'
         +'<div class="col-sm-12" id="purposes_scroll">';
         for (i=0; i < arrLen; i++ ) {
+
+                var cookietitle=eval(`Config.purpose${i}_cookietitle`);
+                var Description=eval(`Config.purpose${i}_description`);
+                var pur=eval(`Config.purpose${i}_purpose`);
+                var name=eval(`Config.purpose${i}_name`);
+                var required=eval(`Config.purpose${i}_required`);
+
                 cookieSidebarText=cookieSidebarText + ' <div>'
                     +'<div class="social-plugin col-sm-10" id="purpose_list">'
-                    +'<strong>'+Config.purposes[i].cookietitle+': </strong>'+ Config.purposes[i].description
+                    +'<strong>'+cookietitle+': </strong>'+ Description
                     +'<div class="cookieUsed" style="padding-top:3px;font-size:10px; ">'
-                    +'Cookies Used: '+Config.purposes[i].purpose
+                    +'Cookies Used: '+pur
                     +'</div> '
                     +'</div>'
                     +'<div class="toggle text-right" style="padding-top:20px;">'
                     +'<label class="switch"> '
-                    +'<input type="checkbox" class="'+Config.purposes[i].name+'" value="'+Config.purposes[i].required+'"id="'+Config.purposes[i].name+'">'
+                    +'<input type="checkbox" class="'+name+'" value="'+required+'"id="'+name+'">'
                     +'<span class="slider round"><div class="slide-txt">on</div></span>'
                     +'</label>'
                     +'</div>'
@@ -148,11 +155,15 @@ privacyCheck=0;
 
 for (i=0; i < arrLen; i++ ) {
 
-if(Config.purposes[i].required==true){
-$("input."+Config.purposes[i].name).attr("checked", "checked");
-$("input."+Config.purposes[i].name).attr("disabled", "disabled");
+        var name=eval(`Config.purpose${i}_name`);
+        var required=eval(`Config.purpose${i}_required`);
+
+if(required){
+        console.log(required)
+$("input."+name).attr("checked", "checked");
+$("input."+name).attr("disabled", "disabled");
 }
-$("#cookiebar").on('change',"input."+Config.purposes[i].name, function(){
+$("#cookiebar").on('change',"input."+name, function(){
        
         if (this.checked) {
                 var selected=this.id;

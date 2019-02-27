@@ -36,9 +36,12 @@ $.ajax({
   });
 
 function vendorActivate(){
-
-    if(Config.isVendorRequired == true){
+    console.log(Config.isVendorRequired)
+    if(Config.isVendorRequired){
+       console.log("vneodr needed")
         document.getElementById("vendor_show_text").style.display="block";
+    }else{
+        document.getElementById("vendor_show_text").style.display="none";
     }
 
 }
@@ -86,11 +89,14 @@ function cookieAction(q){
 }
 
 function checkAnalytical(){
-   
     for(i=0;i<Config.numberOfPurposes;i++){
-            var is_cookie_present = getCookie(Config.purposes[i].cookies[0]);
-            console.log(is_cookie_present)
-                var checkbox = document.querySelector("input."+Config.purposes[i].name);
+
+        var cook=eval(`Config.purpose${i}_cookies`);
+        var name=eval(`Config.purpose${i}_name`);
+        
+
+            var is_cookie_present = getCookie(cook);
+                var checkbox = document.querySelector("input."+name);
                 if(is_cookie_present=="accepted"){
                     checkbox.checked=true;
                 }
@@ -113,9 +119,8 @@ document.getElementById("fixedBottomNav").style.display = 'none';
 function acceptall(){
     analytics();
     for(i=0;i<Config.numberOfPurposes;i++){
-        for(j=0;j<=Config.purposes[i].cookies.length;j++){
-        createCookie(Config.purposes[i].cookies[j],"accepted",30);
-        }
+        var cookies=eval(`Config.purpose${i}_cookies`)
+        createCookie(cookies,"accepted",30);
     }
 	document.getElementById("fixedBottomNav").style.display = 'none';
 }
@@ -132,7 +137,7 @@ function addPrivacy()
 function deletecookie(){
 (function () {
     var cookies = document.cookie.split("; ");
-    for (var c = 0; c < cookies.length; c++) {
+    for (var c = 0; c <= cookies.length; c++) {
         var d = window.location.hostname.split(".");
         while (d.length > 0) {
             var cookieBase = encodeURIComponent(cookies[c].split(";")[0].split("=")[0]) + '=; expires=Thu, 01-Jan-1970 00:00:01 GMT; domain=' + d.join('.') + ' ;path=';
@@ -141,12 +146,14 @@ function deletecookie(){
             while (p.length > 0) {
                 document.cookie = cookieBase + p.join('/');
                 p.pop();
+                
             };
-			d.shift();
-        }
+            d.shift();
+        }return true;
     }
 })();
 createCookie("PrivacyPolicy","accepted",30);
+
 }
 
 
@@ -167,7 +174,8 @@ function deleteCookie(name, path, domain) {
 function enable_toggles(){
      
     for (i=0; i < Config.numberOfPurposes; i++ ) {
-        $("input."+Config.purposes[i].name).prop('checked', true);
+        var toggles = eval(`Config.purpose${i}_name`);
+        $("input."+toggles).prop('checked', true);
     }
     document.getElementById("vendor_show_text").style.display="block";
     document.getElementById("vendor_hide_text").style.display="none";
@@ -194,9 +202,10 @@ function vendor_hide(){
 function saveConsent(){
 
     for (i=0; i < Config.numberOfPurposes; i++ ) {
-
-           var checkbox=document.querySelector("input."+Config.purposes[i].name);
-           var cookie=Config.purposes[i].cookies[0];
+        
+        var name=eval(`Config.purpose${i}_name`)
+           var checkbox=document.querySelector("input."+name);
+           var cookie=eval(`Config.purpose${i}_cookies`);
             if(checkbox.checked==true){
                 createCookie(cookie,"accepted",30)
                 if(cookie=="Analytics"){
@@ -208,18 +217,18 @@ function saveConsent(){
                 }
             }
             else if(checkbox.checked==false){
-
-                if(cookie=="Analytics"){
-                    deletecookie();
+                
+                if(cookie=="Analytics" || cookie=="analytics"){
+                     var del =deletecookie();
                     createCookie(cookie,"declined",30)
                     location.reload(false);
                 }
                 else if(cookie=="AdSense"){
-
+                    
                     createCookie(cookie,"declined",30)
 
                 }
-                    
+                createCookie(cookie,"declined",30)   
             }
     }
 
