@@ -1,12 +1,10 @@
 # Manage Consent Cookies as per IAB/GDPR Transparency and Consent Framework
 
-# Usage
+# Usage Instructions
 
 Download the whole CookieConsent directory and put it the src folder where the index page resides.
 
-Use the config.js file to configure the Cookie consent banner of your choice.
-
-All the text and headings can be made of your choice by mentioning it in config file.
+Use the config.js file to configure the Cookie consent banner of your choice. You are able to modify the text and headings etc using this config file. The table below summarises the variables used and its description.
 
 ![Screenshot of the config.js file](configScreenshot.png)
 
@@ -23,7 +21,7 @@ All the text and headings can be made of your choice by mentioning it in config 
 | cookiePolicy| Path to the cookie policy file eg.`cookiePolicy.html`|
 | numberOfPurposes| Number of purposes/cookie apps used|
 
-Here the description on how to fill the details of Purposes/cookie apps which are used.
+Below is the description on how to fill the details of Purposes/cookie apps which are used.
 
 
 | Purpose Variable| Description |
@@ -75,19 +73,17 @@ navigation buttons and inside the **nav** navigation tag.
 ```
 
 
-**How to Install :**
+**Recommendations to Install or implement cookie consents using iGrant.io provided framework:**
 
-Download the whole Cookie Consent directory files and put it the “Source/src” folder of your project where the index page resides.
-
-Copy the head scripts from Cookies.html to the pages where the Cookie Consent is required.
-
-Put an onload() function to the body tag on every page.
+1. Download the whole Cookie Consent directory files and put it the “Source/src” folder of your project where the index page resides.
+2. Copy the head scripts from Cookies.html to the pages where the Cookie Consent is required.
+3. Put an onload() function to the body tag on every page.
   
-Copy body part codes from Cookie.html to the pages where cookie Consent banner is required. 
+	Copy body part codes from Cookie.html to the pages where cookie 	Consent banner is required. 
 
-Place the copied code below the top navigation bar inside the body tag on your page. Be sure to put the code in the same <div> tag of the top navigation bar so that is appears top of every other element in the page. 
+4. Place the copied code below the top navigation bar inside the body tag on your page. Be sure to put the code in the same <div> tag of the top navigation bar so that is appears top of every other element in the page. 
 
-Use the config.js file to configure the Cookie consent banner of your own choice.
+5. Use the config.js file to configure the Cookie consent banner of your own choice.
 
 
 
