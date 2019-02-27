@@ -37,7 +37,9 @@
 	| cookies | Mention which cookies are used for this purpose|
 	| required | Value- `true` or `false` If true, user won't be able to disable the cookie of this purpose.|
 
-4. Copy the head scripts from **Cookies.html** to the pages where the Cookie Consent is required.
+### Calling the consent banners from your web files
+
+1. Copy the head scripts from **Cookies.html** to the pages where the Cookie Consent is required.
 
 **Head Scripts**
 ```html
@@ -49,15 +51,15 @@
     <script src="cookieconsent/js/sidebar.js"></script>
     <script src="cookieconsent/js/sidebar-main.js"></script>
 ```
-Put an **onload()** function to the body tag on every page.
+2. Put an **onload()** function to the body tag on every page.
 ```html
    <body onload="checkCookie()">
    ...
    </body>
 ```
-Copy body part codes from **Cookie.html** to the pages where cookie Consent banner is required.
+3. Copy body part codes from **Cookie.html** to the pages where cookie Consent banner is required.
 
-Place the copied code below the top navigation bar inside the body tag on your page. Place the code right below the **div** of
+4. Place the copied code below the top navigation bar inside the body tag on your page. Place the code right below the **div** of
 navigation buttons and inside the **nav** navigation tag.
 ```html
    <nav><!--Fixed top navigation bar-->
