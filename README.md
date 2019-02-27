@@ -74,7 +74,7 @@ navigation buttons and inside the **nav** navigation tag.
    </nav><!--Top navigation ends here--><!-- /Fixed Top Navigation ends here-->
 ```
 
-### SetUp for non-gitHub or non-developers
+## SetUp for non-gitHub users or non-developers
 **Recommendations to Install or implement cookie consents using iGrant.io provided framework:**
 
 1. Download the Cookie Consent directory files and put it the “Source/src” folder of your project where the index page resides.
