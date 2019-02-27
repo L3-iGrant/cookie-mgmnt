@@ -1,13 +1,16 @@
 # Manage Consent Cookies as per IAB/GDPR Transparency and Consent Framework
 
-# Usage Instructions
+# Usage Instructions for developers
 
-Download the whole CookieConsent directory and put it the src folder where the index page resides.
+### Getting Set Up
 
-Use the config.js file to configure the Cookie consent banner of your choice. You are able to modify the text and headings etc using this config file. The table below summarises the variables used and its description.
+1. Fork this repository on GitHub.
+2. Clone your forked repository (not our original one) to your hard drive with git clone `https://github.com/YOURUSERNAME/cookie-mgmnt.git` 
+   
+   The clone directory is: 
+  `https://github.com/L3-iGrant/cookie-mgmnt.git`
 
-![Screenshot of the config.js file](configScreenshot.png)
-
+3. cd cookie-mgmnt/js. Use the config.js file to configure the Cookie consent banner of your choice. You are able to modify the text and headings etc using this config file. The table below summarises the variables used and its description.
 
 | Variable Name | Description |
 |---|----|
@@ -75,7 +78,7 @@ navigation buttons and inside the **nav** navigation tag.
 
 **Recommendations to Install or implement cookie consents using iGrant.io provided framework:**
 
-1. Download the whole Cookie Consent directory files and put it the “Source/src” folder of your project where the index page resides.
+1. Download the Cookie Consent directory files and put it the “Source/src” folder of your project where the index page resides.
 2. Copy the head scripts from Cookies.html to the pages where the Cookie Consent is required.
 3. Put an onload() function to the body tag on every page.
   
