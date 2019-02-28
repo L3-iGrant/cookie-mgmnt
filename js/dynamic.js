@@ -12,9 +12,7 @@
  */
 
 $(document).ready(function(){
-
-
-console.log(vendor_list)
+        checkCookie();
 
 var i=0,
     arrLen=Config.numberOfPurposes,
@@ -159,7 +157,7 @@ for (i=0; i < arrLen; i++ ) {
         var required=eval(`Config.purpose${i}_required`);
 
 if(required){
-        console.log(required)
+        
 $("input."+name).attr("checked", "checked");
 $("input."+name).attr("disabled", "disabled");
 }
