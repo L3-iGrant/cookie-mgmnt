@@ -74,10 +74,10 @@ navigation buttons and inside the **nav** navigation tag.
 **Recommendations to Install or implement cookie consents using iGrant.io provided framework:**
 
 1. Download the Cookie Consent directory files and put it the “Source/src” folder of your project where the index page resides.
+
 2. Copy the head scripts from Cookies.html to the pages where the Cookie Consent is required.
-3. Put an onload() function to the body tag on every page.
-  
-	Copy body part codes from Cookie.html to the pages where cookie 	Consent banner is required. 
+
+3. Copy body part codes from Cookie.html to the pages where Cookie Consent banner is required. 
 
 4. Place the copied code below the top navigation bar inside the body tag on your page. Be sure to put the code in the same <div> tag of the top navigation bar so that is appears top of every other element in the page. 
 
