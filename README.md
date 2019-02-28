@@ -51,15 +51,9 @@
     <script src="cookieconsent/js/sidebar.js"></script>
     <script src="cookieconsent/js/sidebar-main.js"></script>
 ```
-2. Put an **onload()** function to the body tag on every page.
-```html
-   <body onload="checkCookie()">
-   ...
-   </body>
-```
-3. Copy body part codes from **Cookie.html** to the pages where cookie Consent banner is required.
+2. Copy body part codes from **Cookie.html** to the pages where cookie Consent banner is required.
 
-4. Place the copied code below the top navigation bar inside the body tag on your page. Place the code right below the **div** of
+3. Place the copied code below the top navigation bar inside the body tag on your page. Place the code right below the **div** of
 navigation buttons and inside the **nav** navigation tag.
 ```html
    <nav><!--Fixed top navigation bar-->
