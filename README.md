@@ -36,7 +36,6 @@
 	| name | Each app/purpose should have unique name to be identified |
 	| cookietitle | Name of the purpose. This will be shown in the manager as purpose title|
 	| description | Description about the purpose|
-	| Purpose | Decribes for what this purpose/app is used. Eg. `Google Analytics`|
 	| cookies | Mention which cookies are used for this purpose|
 	| required | Value- `true` or `false` If true, user won't be able to disable the cookie of this purpose.|
 
