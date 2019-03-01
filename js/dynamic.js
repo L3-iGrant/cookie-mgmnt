@@ -31,7 +31,7 @@ var i=0,
         +Config.cookieConsentSidebarSubDescription
         +'</div>'
         +'<div class="cookie-accept-all text-right" >'
-        +'<button class="btn btn-default btn-round cookie_sidebar" onclick="enable_toggles()">Enable All</button>'
+        +'<button class="btn btn-default btn-round cookie_sidebar" onclick="enable_toggles()">Allow All</button>'
         +'</div>'
         +'<div class="col-sm-12"><hr></div><br>'
         +'</div>'
@@ -123,22 +123,16 @@ var i=0,
         +'<div class="col-sm-12" id="purposes_scroll">';
         for (i=0; i < arrLen; i++ ) {
 
-                var cookietitle=eval(`Config.purpose${i}_cookietitle`);
-                var Description=eval(`Config.purpose${i}_description`);
-                var pur=eval(`Config.purpose${i}_purpose`);
-                var name=eval(`Config.purpose${i}_name`);
-                var required=eval(`Config.purpose${i}_required`);
-
                 cookieSidebarText=cookieSidebarText + ' <div>'
                     +'<div class="social-plugin col-sm-10" id="purpose_list">'
-                    +'<strong>'+cookietitle+': </strong>'+ Description
+                    +'<strong>'+Config.purposes[i].cookietitle+': </strong>'+ Config.purposes[i].description
                     +'<div class="cookieUsed" style="padding-top:3px;font-size:10px; ">'
-                    +'Cookies Used: '+pur
+                    +'Cookies Used: '+Config.purposes[i].cookies
                     +'</div> '
                     +'</div>'
                     +'<div class="toggle text-right" style="padding-top:20px;">'
                     +'<label class="switch"> '
-                    +'<input type="checkbox" class="'+name+'" value="'+required+'"id="'+name+'">'
+                    +'<input type="checkbox" class="'+Config.purposes[i].name+'" value="'+Config.purposes[i].required+'"id="'+Config.purposes[i].name+'">'
                     +'<span class="slider round"><div class="slide-txt">on</div></span>'
                     +'</label>'
                     +'</div>'
@@ -153,15 +147,13 @@ privacyCheck=0;
 
 for (i=0; i < arrLen; i++ ) {
 
-        var name=eval(`Config.purpose${i}_name`);
-        var required=eval(`Config.purpose${i}_required`);
 
-if(required){
+if( Config.purposes[i].required){
         
-$("input."+name).attr("checked", "checked");
-$("input."+name).attr("disabled", "disabled");
+$("input."+Config.purposes[i].name).attr("checked", "checked");
+$("input."+Config.purposes[i].name).attr("disabled", "disabled");
 }
-$("#cookiebar").on('change',"input."+name, function(){
+$("#cookiebar").on('change',"input."+Config.purposes[i].name, function(){
        
         if (this.checked) {
                 var selected=this.id;

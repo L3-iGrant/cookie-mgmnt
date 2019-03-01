@@ -36,9 +36,7 @@ $.ajax({
   });
 
 function vendorActivate(){
-    console.log(Config.isVendorRequired)
     if(Config.isVendorRequired){
-       console.log("vneodr needed")
         document.getElementById("vendor_show_text").style.display="block";
     }else{
         document.getElementById("vendor_show_text").style.display="none";
@@ -90,47 +88,71 @@ function cookieAction(q){
 
 function checkAnalytical(){
     for(i=0;i<Config.numberOfPurposes;i++){
-
-        var cook=eval(`Config.purpose${i}_cookies`);
-        var name=eval(`Config.purpose${i}_name`);
         
 
-            var is_cookie_present = getCookie(cook);
-                var checkbox = document.querySelector("input."+name);
+        var cookies_length=Config.purposes[i].cookies.length
+
+           for(j=0;j < cookies_length;j++)
+           {
+           var cookies=Config.purposes[i].cookies[j]
+            var is_cookie_present = getCookie(cookies);
+                var checkbox = document.querySelector("input."+Config.purposes[i].name);
                 if(is_cookie_present=="accepted"){
                     checkbox.checked=true;
                 }
                 else{
                     checkbox.checked=false;
                 }
+
+            }
     }
 }
 
-
-function deleteall(){
-createCookie("_ga","",-1);
-createCookie("_gid","",-1);
-createCookie("PrivacyPolicy","accepted",-1);
-createCookie("_dc_gtm_UA-115472117-1","",-1);
-document.getElementById("fixedBottomNav").style.display = 'none';
-}
 
 
 function acceptall(){
     analytics();
     for(i=0;i<Config.numberOfPurposes;i++){
-        var cookies=eval(`Config.purpose${i}_cookies`)
-        createCookie(cookies,"accepted",30);
-    }
+
+        var cookies_length=Config.purposes[i].cookies.length
+
+           for(j=0;j < cookies_length;j++)
+           {
+            var cookie=Config.purposes[i].cookies[j]
+            if(cookie=="Analytics" || cookie=="analytics" || cookie=="_ga" || cookie=="_gid" || cookie=="_gat"){
+               analytics();
+            }
+            if(cookie=="_ga" || cookie=="_gid" || cookie=="_gat"){
+                if(cookie=="_gat"){createCookie(cookie,"accepted",30);}
+            }
+            else{
+                   createCookie(cookie,"accepted",30);
+            }  
+            }
+        }
 	document.getElementById("fixedBottomNav").style.display = 'none';
 }
+
 
 function addPrivacy()
 {
  cookietxt = "accepted";
  document.getElementById("fixedBottomNav").style.display = 'none';
  if (cookietxt != "" && cookietxt != null) {
-     setCookie("PrivacyPolicy", cookietxt, 30);
+
+    for(i=0;i<Config.numberOfPurposes;i++){
+
+        var is_required= Config.purposes[i].required;
+        var cookies_length=Config.purposes[i].cookies.length
+        if(is_required){
+           for(j=0;j < cookies_length;j++)
+           {
+               var cookie = Config.purposes[i].cookies[j];
+               setCookie(cookie, cookietxt, 30);
+
+           }
+        }
+    }
  }
 }
 
@@ -152,8 +174,6 @@ function deletecookie(){
         }return true;
     }
 })();
-createCookie("PrivacyPolicy","accepted",30);
-
 }
 
 
@@ -174,7 +194,7 @@ function deleteCookie(name, path, domain) {
 function enable_toggles(){
      
     for (i=0; i < Config.numberOfPurposes; i++ ) {
-        var toggles = eval(`Config.purpose${i}_name`);
+        var toggles =Config.purposes[i].name;
         $("input."+toggles).prop('checked', true);
     }
     document.getElementById("vendor_show_text").style.display="block";
@@ -202,40 +222,65 @@ function vendor_hide(){
 function saveConsent(){
 
     for (i=0; i < Config.numberOfPurposes; i++ ) {
-        
-        var name=eval(`Config.purpose${i}_name`)
+
+        var name=Config.purposes[i].name;
            var checkbox=document.querySelector("input."+name);
-           var cookie=eval(`Config.purpose${i}_cookies`);
+
+           var cookies_length=Config.purposes[i].cookies.length
+
+           for(j=0;j < cookies_length;j++)
+           {
+           var cookie=Config.purposes[i].cookies[j]
             if(checkbox.checked==true){
-                createCookie(cookie,"accepted",30)
-                if(cookie=="Analytics"){
-                    analytics();
-                    
-                }
-                else if(cookie=="PrivacyPolicy"){
-                    createCookie("PrivacyPolicy","accepted",30)
+                
+                var get_cookie=getCookie(cookie);
+                if(get_cookie!="accepted"){
+
+                    if(cookie=="Analytics" || cookie=="analytics" || cookie=="_ga" || cookie=="_gid" || cookie=="_gat"){
+                        analytics();
+                    }
+                    if(cookie=="_ga" || cookie=="_gid" || cookie=="_gat"){
+                        if(cookie=="_gat"){createCookie(cookie,"accepted",30);}
+                    }
+                    else{
+                        createCookie(cookie,"accepted",30);
+                    }
                 }
             }
             else if(checkbox.checked==false){
                 
-                if(cookie=="Analytics" || cookie=="analytics"){
-                     var del =deletecookie();
+                if(cookie=="Analytics" || cookie=="analytics" || cookie=="_ga" || cookie=="_gid" || cookie=="_gat"){
+                    
+                    var del =deletecookie();
                     createCookie(cookie,"declined",30)
                     location.reload(false);
                 }
-                else if(cookie=="AdSense"){
+                else{
                     
                     createCookie(cookie,"declined",30)
 
-                }
-                createCookie(cookie,"declined",30)   
+                }  
             }
+        }
     }
 
 }
 
 function checkCookie() {
-    var cookietxt=getCookie("PrivacyPolicy");
+
+    for(i=0;i<Config.numberOfPurposes;i++){
+
+        var is_required= Config.purposes[i].required;
+        var cookies_length=Config.purposes[i].cookies.length
+        if(is_required){
+           for(j=0;j < cookies_length;j++)
+           {   
+               var cookie = Config.purposes[i].cookies[j];
+               var cookietxt=getCookie(cookie);
+               console.log(cookietxt)
+           }
+        }
+    }
     if (cookietxt == "accepted") {
           document.getElementById("fixedBottomNav").style.display='none'; 
          } else {
