@@ -4,7 +4,10 @@
 
 ### Getting Set Up
 
-1. Fork this repository on GitHub as part of your project
+1. Fork this repository on GitHub as part of your project. You can fork by clicking on "Fork" on the top right corner:
+
+![](githubfork.png)
+
 2. Clone your forked repository (not our original one) to your hard drive with git clone `https://github.com/YOURUSERNAME/cookie-mgmnt.git` 
    
    The clone directory is: 
