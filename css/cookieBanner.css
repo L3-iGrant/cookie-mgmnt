@@ -54,11 +54,31 @@
     @media only screen and (max-width: 992px) {
       .cta-4 .btn {
         margin-top: 0px; } }
+
+.navbar-fixed-bottom{
+  background-color:white;
+  border-top: 1px solid #DFDFDF;
+}
+
+.cookieBannerContainer{
+  color:black;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+}
   
 
   /*-----------------*/
   /* Global Styles   */
   /*-----------------*/
+  .btn-alwaysOn{
+
+    height:auto !important;
+    padding:5px 10px !important;
+    font-size:9px !important;
+    font-family:'helvetica'!important;
+    color:white !important;
+    background-color: black !important;
+  }
   .btn {
     border-radius: 2px;
     font-size: 12px;

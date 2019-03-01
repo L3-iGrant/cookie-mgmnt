@@ -127,8 +127,13 @@ var i=0,
                     +'<div class="social-plugin col-sm-10" id="purpose_list">'
                     +'<strong>'+Config.purposes[i].cookietitle+': </strong>'+ Config.purposes[i].description
                     +'<div class="cookieUsed" style="padding-top:3px;font-size:10px; ">'
-                    +'Cookies Used: '+Config.purposes[i].cookies
-                    +'</div> '
+                    +'Cookies Used: ';
+                    var cookies_length=Config.purposes[i].cookies.length;
+                    for(j = 0; j < cookies_length; j++){
+                        cookieSidebarText=cookieSidebarText+Config.purposes[i].cookies[j];
+                        if(j!=cookies_length-1){cookieSidebarText=cookieSidebarText+", "}
+                        }
+                    cookieSidebarText=cookieSidebarText +'</div> '
                     +'</div>'
                     +'<div class="toggle text-right" style="padding-top:20px;">'
                     +'<label class="switch"> '
@@ -187,10 +192,49 @@ $('#cookiebar').on('click', "a."+vendor_list.vendors[i].id, function(){
 
 }
 
-var cookieBannerText="";
-cookieBannerText=cookieBannerText +'<a href="index.html">'+Config.companyName+'</a> '+Config. cookieBannerDescription+' Please read our <a href="'+Config.cookiePolicy+'">Cookies Policy</a>  and <a href="'+Config.privacyPolicy+'">Privacy Policy</a> for details.';
+var cookieConsentAlwaysOnButton = ""
+cookieConsentAlwaysOnButton = cookieConsentAlwaysOnButton + '<button class="btn btn-default btn-round btn-alwaysOn">Cookie Consents</button>'
+$("#cookieConsentAlwaysOnButton").html(cookieConsentAlwaysOnButton);
 
-        $("#cookiebanner").html(cookieBannerText);
+
+var cookieSidebarBackButton = ""
+cookieSidebarBackButton = cookieSidebarBackButton + '<a class="vendor_list_text col-sm-12" onclick="vendor_hide()" style="cursor:pointer;margin-top:15px;">back</a>';
+$("#vendor_hide_text").html(cookieSidebarBackButton);
+
+
+var cookieSidebarVendorButton = ""
+cookieSidebarVendorButton = cookieSidebarVendorButton + ' <a class="vendor_list_text col-sm-12" onclick="vendor_show()" style="cursor:pointer;margin-top:15px;">See all Vendors</a>';
+$("#vendor_show_text").html(cookieSidebarVendorButton);
+
+
+var cookieSidebarCancelButton = ""
+cookieSidebarCancelButton = cookieSidebarCancelButton + '<button class="btn btn-default btn-round cookie_sidebar"style="margin-right:5px;">Cancel</button>';
+$("#cookie-cancel").html(cookieSidebarCancelButton);
+
+
+var cookieSidebarSaveButton = ""
+cookieSidebarSaveButton = cookieSidebarSaveButton + '<button class="btn btn-default btn-round cookie_sidebar" onclick="saveConsent()">Save</button>';
+$("#cookie-save-button").html(cookieSidebarSaveButton);
+
+
+var cookieSidebarPoweredBy = ""
+cookieSidebarPoweredBy = cookieSidebarPoweredBy + 'Powered by <strong>iGrant.io</strong>';
+$("#powered-by").html(cookieSidebarPoweredBy);
+
+var cookieBannerText="";
+cookieBannerText = cookieBannerText +'<a href="index.html">'
+                                +Config.companyName+'</a> '+Config. cookieBannerDescription
+                                +' Please read our <a href="'+Config.cookiePolicy+'">Cookies Policy</a>  and <a href="'+Config.privacyPolicy+'">Privacy Policy</a> for details.';
+                                
+$("#cookieBannerText").html(cookieBannerText);
+
+var cookieBannerManageButton="";
+cookieBannerManageButton = cookieBannerManageButton +'<button class="btn btn-default btn-round" style="margin-bottom:10px;"onclick="addPrivacy()">Manage Cookies</button>';                             
+$("#cookieBannerManageButton").html(cookieBannerManageButton);   
+
+var cookieBannerAllowButton = "";
+cookieBannerAllowButton = cookieBannerAllowButton +'<button class="btn btn-default btn-round btnaccept" style="margin-left: 10px;margin-bottom:10px;" onclick="acceptall()">Allow</button>';
+$("#cookieBannerAllowButton").html(cookieBannerAllowButton);   
 
  var cookieBannerHeader="";
  cookieBannerHeader=cookieBannerHeader+Config.cookieBannerHeader;
@@ -201,6 +245,9 @@ cookieBannerText=cookieBannerText +'<a href="index.html">'+Config.companyName+'<
         document.getElementById("purposes_scroll").style.overflowY="scroll";
         document.getElementById("purposes_scroll").style.height="270px";
         }
+
+
+        
 });
 
 

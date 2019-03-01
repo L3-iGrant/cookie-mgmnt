@@ -16,8 +16,8 @@ var Config = {
     isVendorRequired :true,
     companyName:'iGrant.io',
     cookieBannerHeader:'YOUR DATA, YOUR CHOICE', 
-    cookieBannerDescription:'uses cookies to enhance your experience of our website. By clicking Accept, you are consenting to the use of cookies.',// "Please read our Cookies Policy and Privacy Policy pages for details." this text will be added at the end.
-    cookieConsentSidebarMainText:'uses cookies to enhance your experience of our website. By enabling, you are consenting to the use of cookies.',// "Please read our Cookies Policy and Privacy Policy pages for details." this text will be added at the end.
+    cookieBannerDescription:'uses cookies to enhance your experience of our website. By clicking Allow, you are consenting to the use of cookies.',// "Please read our Cookies Policy and Privacy Policy pages for details." this text will be added at the end.
+    cookieConsentSidebarMainText:'uses cookies to enhance your experience of our website. By allowing, you are consenting to the use of cookies.',// "Please read our Cookies Policy and Privacy Policy pages for details." this text will be added at the end.
     cookieConsentSidebarSubTitle:'Manage Cookie Preferences',
     cookieConsentSidebarSubDescription:'You can set your consent preferences based on the purposes below.',
     privacyPolicy: 'privacy.html#privacy', 

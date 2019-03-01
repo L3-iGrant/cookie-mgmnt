@@ -78,13 +78,6 @@ function createCookie(name,value,days) {
 	document.cookie = name+"="+value+expires+"; path=/";
   }
 
-function eraseCookie(name) {
-    createCookie(name,"",-1);
-  }
-function cookieAction(q){
-
-
-}
 
 function checkAnalytical(){
     for(i=0;i<Config.numberOfPurposes;i++){
@@ -107,7 +100,6 @@ function checkAnalytical(){
             }
     }
 }
-
 
 
 function acceptall(){
@@ -287,5 +279,3 @@ function checkCookie() {
          document.getElementById("fixedBottomNav").style.display = 'block';
     }
 }
-function activeTabMove(i){if(i==2){activeTab('privacy');document.location.href = "#privacy_statement";}else{activeTab('cookies');$(window).scrollTop(0);}}
-function activeTab(tab){ $('.nav-tabs a[href="#'+tab+'"]').tab('show');}
