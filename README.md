@@ -45,31 +45,15 @@
 
 **Head Scripts**
 ```html
-    <script type="text/javascript" src="cookieconsent/js/dynamic.js"></script>
-    <script type="text/javascript" src="cookieconsent/js/config.js"></script>
-    <script type="text/javascript" src="cookieconsent/js/cookie-manager.js"></script>
-    <link rel="stylesheet" href="cookieconsent/css/cookieBanner.css">
-    <link rel="stylesheet" type="text/css" href="cookieconsent/css/cookieSidebar.css" />
-    <script src="cookieconsent/js/sidebar.js"></script>
-    <script src="cookieconsent/js/sidebar-main.js"></script>
-```
-2. Copy body part codes from **Cookie.html** to the pages where cookie Consent banner is required.
-
-3. Place the copied code below the top navigation bar inside the body tag on your page. Place the code right below the **div** of
-navigation buttons and inside the **nav** navigation tag.
-```html
-   <nav><!--Fixed top navigation bar-->
-   <div><!-- Container begins --> 
-   <div> <!-- Nav bar div -->
-   ...
-   </div> <!-- Nav bar div Ends -->
-   <!--Begin cookie consent-->
-      
-      <!-- copy the code here -->
-   
-   <!--End cookie consent -->
-   </div><!-- /.container ends here-->
-   </nav><!--Top navigation ends here--><!-- /Fixed Top Navigation ends here-->
+   	<link rel="stylesheet" href="css/bootstrap.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/consent-code.js"></script>
+	<script type="text/javascript" src="js/dynamic.js"></script>
+	<script type="text/javascript" src="js/config.js"></script>
+	<script type="text/javascript" src="js/cookie-manager.js"></script>
+	<link rel="stylesheet" href="css/cookieBanner.css">
+	<script src="js/sidebar.js"></script>
+	<script src="js/sidebar-main.js"></script>
 ```
 
 ## SetUp for non-gitHub users or non-developers
@@ -77,13 +61,9 @@ navigation buttons and inside the **nav** navigation tag.
 
 1. Download the Cookie Consent directory files and put it the “Source/src” folder of your project where the index page resides.
 
-2. Copy the head scripts from Cookies.html to the pages where the Cookie Consent is required.
+2. Copy the head scripts from cookies.html to the pages where the Cookie Consent is required. 
 
-3. Copy body part codes from Cookie.html to the pages where Cookie Consent banner is required. 
-
-4. Place the copied code below the top navigation bar inside the body tag on your page. Be sure to put the code in the same <div> tag of the top navigation bar so that is appears top of every other element in the page. 
-
-5. Use the config.js file to configure the Cookie consent banner of your own choice.
+3. Use the config.js file to configure the Cookie consent banner of your own choice.
 
 
 
