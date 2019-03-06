@@ -45,15 +45,15 @@
 
 **Head Scripts**
 ```html
-   	<link rel="stylesheet" href="css/bootstrap.css">
+   	<link rel="stylesheet" href="cookieconsent/css/bootstrap.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script type="text/javascript" src="js/consent-code.js"></script>
-	<script type="text/javascript" src="js/dynamic.js"></script>
-	<script type="text/javascript" src="js/config.js"></script>
-	<script type="text/javascript" src="js/cookie-manager.js"></script>
-	<link rel="stylesheet" href="css/cookieBanner.css">
-	<script src="js/sidebar.js"></script>
-	<script src="js/sidebar-main.js"></script>
+	<script type="text/javascript" src="cookieconsent/js/consent-code.js"></script>
+   	<script type="text/javascript" src="cookieconsent/js/dynamic.js"></script>
+    	<script type="text/javascript" src="cookieconsent/js/config.js"></script>
+    	<script type="text/javascript" src="cookieconsent/js/cookie-manager.js"></script>
+    	<link rel="stylesheet" href="cookieconsent/css/cookieBanner.css">
+    	<script src="cookieconsent/js/sidebar.js"></script>
+    	<script src="cookieconsent/js/sidebar-main.js"></script>
 ```
 
 ## SetUp for non-gitHub users or non-developers
