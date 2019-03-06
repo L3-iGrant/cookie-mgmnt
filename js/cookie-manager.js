@@ -36,7 +36,7 @@ $.ajax({
   });
 
 function vendorActivate(){
-    if(Config.isVendorRequired){
+    if(Config.isVendorRequired == "true"){
         document.getElementById("vendor_show_text").style.display="block";
     }else{
         document.getElementById("vendor_show_text").style.display="none";

@@ -153,7 +153,7 @@ privacyCheck=0;
 for (i=0; i < arrLen; i++ ) {
 
 
-if( Config.purposes[i].required){
+if( Config.purposes[i].required == "true"){
         
 $("input."+Config.purposes[i].name).attr("checked", "checked");
 $("input."+Config.purposes[i].name).attr("disabled", "disabled");
