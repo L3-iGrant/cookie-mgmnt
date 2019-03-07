@@ -59,8 +59,16 @@
 1. Download the Cookie Consent directory files and put it the “Source/src” folder of your project where the index page resides. Make the folder name as "cookie-mgmnt".
 
 2. Copy the head scripts from cookies.html to the pages where the Cookie Consent is required. 
+```html
+   	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="cookie-mgmnt/js/cookie_consent_headtags.js"></script>
+	<script type="text/javascript" src="cookie-mgmnt/js/cookie_consent_body.js"></script>
+	
+```
 
-3. Use the config.js file to configure the Cookie consent banner of your own choice.
+3. Use the config.js file to configure the Cookie consent banner and sidebar of your own choice.
 
 
 
