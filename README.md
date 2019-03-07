@@ -41,25 +41,22 @@
 
 ### Calling the consent banners from your web files
 
-1. Copy the head scripts from **Cookies.html** to the pages where the Cookie Consent is required.
+1. Copy the head scripts from **cookies.html** to the pages where the Cookie Consent is required. You can ignore the first line of script if already using jQuery in you webpage.
 
 **Head Scripts**
 ```html
-   	<link rel="stylesheet" href="cookieconsent/css/bootstrap.css">
+   	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script type="text/javascript" src="cookieconsent/js/consent-code.js"></script>
-   	<script type="text/javascript" src="cookieconsent/js/dynamic.js"></script>
-    	<script type="text/javascript" src="cookieconsent/js/config.js"></script>
-    	<script type="text/javascript" src="cookieconsent/js/cookie-manager.js"></script>
-    	<link rel="stylesheet" href="cookieconsent/css/cookieBanner.css">
-    	<script src="cookieconsent/js/sidebar.js"></script>
-    	<script src="cookieconsent/js/sidebar-main.js"></script>
+	
+	<script type="text/javascript" src="cookie-mgmnt/js/cookie_consent_headtags.js"></script>
+	<script type="text/javascript" src="cookie-mgmnt/js/cookie_consent_body.js"></script>
+	
 ```
 
 ## SetUp for non-gitHub users or non-developers
 **Recommendations to Install or implement cookie consents using iGrant.io provided framework:**
 
-1. Download the Cookie Consent directory files and put it the “Source/src” folder of your project where the index page resides.
+1. Download the Cookie Consent directory files and put it the “Source/src” folder of your project where the index page resides. Make the folder name as "cookie-mgmnt".
 
 2. Copy the head scripts from cookies.html to the pages where the Cookie Consent is required. 
 

@@ -4,8 +4,7 @@
  * GDPR-cookie - An iGrant.io javascript plugin to manage cookie settings in compliance with EU law
  *
  * Description: This file contains all the functions which creates and deletes cookie.
- *               
- *             
+ *                         
  * Copyright (c) 2018-2019 LCubed AB
  *
  * Author: Anandhu K M
@@ -269,7 +268,7 @@ function checkCookie() {
            {   
                var cookie = Config.purposes[i].cookies[j];
                var cookietxt=getCookie(cookie);
-               console.log(cookietxt)
+               
            }
         }
     }
