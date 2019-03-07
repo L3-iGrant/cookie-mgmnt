@@ -47,17 +47,17 @@
 		_initEvents : function() {
 			var self = this;
 			var ifmobile= mobilecheck();
-			console.log("mobile check is "+ifmobile);
+			
 
 			if( ifmobile=="true" ) {
-				console.log("is mobile")
+				
 				this.trigger.addEventListener( 'click', function(ev) { self._openIconMenu(); vendor_hide();} );
 				this.trigger.addEventListener( 'click', function(ev) { self._closeIconMenu(); } );
 				this.save.addEventListener( 'click', function(ev) { self._closeMenu(); saveConsent();} );
 				this.cookie_cancel.addEventListener( 'click', function(ev) { self._closeMenu(); } );
 			}
 			else{
-				console.log("not mobile")
+				
 			this.trigger.addEventListener( this.eventtype, function( ev ) {
 				ev.stopPropagation();
 				ev.preventDefault();

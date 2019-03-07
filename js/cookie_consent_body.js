@@ -1,8 +1,21 @@
 
+/*!
+ * GDPR-cookie - An iGrant.io javascript plugin to manage cookie settings in compliance with EU law
+ *
+ * Description: This file appends the cookie consent body code to the body tag of the html file from which it is called.  
+ * 
+ * Copyright (c) 2018-2019 LCubed AB
+ *
+ * Author: Anandhu K M
+ *
+ */
+
 $(document).ready(function(){
 
 var cookieCode= "";
-cookieCode =cookieCode +'<div style=" position:fixed; z-index:9999999999;">'
+
+
+cookieCode =cookieCode  +'<div style=" position:fixed; z-index:9999999999;">'
                         +'<div class="sidebar" id="sidebar">'
                         +'<div id="gn-menu" class="gn-menu-main" >'
                         +'<a class="gn-icon-menu" id="cookieConsentAlwaysOnButton"></a>'
