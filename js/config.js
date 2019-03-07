@@ -13,7 +13,7 @@
 var Config = {
 
     vendor_url:'https://vendorlist.consensu.org/vendorlist.json',
-    isVendorRequired :true,
+    isVendorRequired :"true",
     companyName:'iGrant.io',
     cookieBannerHeader:'YOUR DATA, YOUR CHOICE', 
     cookieBannerDescription:'uses cookies to enhance your experience of our website. By clicking Allow, you are consenting to the use of cookies.',// "Please read our Cookies Policy and Privacy Policy pages for details." this text will be added at the end.
@@ -34,7 +34,7 @@ var Config = {
             cookietitle : 'Analytical Cookies', // The title of you cookie as listed in the cookie sidebar.  
             description: 'provide information about how this site is being used so we can improve your experience. Data captured is aggregated and anonymized.', //description about the cookie
             cookies :['Analytics', '_ga', '_gid', '_gat'], //the name of the cookies that are active on the site.
-            required:false, // If "required" is set to true, will not allow this cookie to be disabled by the user.
+            required:"false", // If "required" is set to true, will not allow this cookie to be disabled by the user.
         },
         
         // Purpose 2
@@ -43,7 +43,7 @@ var Config = {
             cookietitle: 'Advertising Cookies',
             description: 'are used for contextual ads from third parties.',                                                                                
             cookies :  ['AdSense'],                                       
-            required : false,
+            required : "false",
         },
         
         // Purpose 1
@@ -52,7 +52,7 @@ var Config = {
             description: 'are necessary for this site to function properly, authenticating logins, for instance. You can only disable essential cookies via browser settings.',                                                  
             cookietitle: 'Essential Cookies',                                                                                 
             cookies :  ['PrivacyPolicy'],                                       
-            required : true,
+            required : "true",
         } 
         
     ]
