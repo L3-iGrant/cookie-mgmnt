@@ -14,8 +14,7 @@
 $(document).ready(function(){
     var cookieCode= "";
 
-cookieCode =cookieCode  +'<link rel="stylesheet" href="cookie-mgmnt/css/bootstrap.css"/>'
-                        +'<script type="text/javascript" src="cookie-mgmnt/js/dynamic.js"></script>'
+cookieCode =cookieCode  +'<script type="text/javascript" src="cookie-mgmnt/js/dynamic.js"></script>'
                         +'<script type="text/javascript" src="cookie-mgmnt/js/config.js"></script>'
                         +'<script type="text/javascript" src="cookie-mgmnt/js/cookie-manager.js"></script>'
                         +'<link rel="stylesheet" href="cookie-mgmnt/css/cookieBanner.css"/>'    

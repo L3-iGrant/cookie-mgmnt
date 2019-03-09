@@ -231,7 +231,8 @@ function saveConsent(){
                         analytics();
                     }
                     if(cookie=="_ga" || cookie=="_gid" || cookie=="_gat"){
-                        if(cookie=="_gat"){createCookie(cookie,"accepted",30);}
+                        if(get_cookie == "declined"){
+                            createCookie(cookie,"accepted",30); }
                     }
                     else{
                         createCookie(cookie,"accepted",30);
@@ -243,6 +244,8 @@ function saveConsent(){
                 if(cookie=="Analytics" || cookie=="analytics" || cookie=="_ga" || cookie=="_gid" || cookie=="_gat"){
                     
                     var del =deletecookie();
+                    deleteCookie("_ga","/",".igrant.io")
+                    deleteCookie("_gid","/",".igrant.io")
                     createCookie(cookie,"declined",30)
                     location.reload(false);
                 }
