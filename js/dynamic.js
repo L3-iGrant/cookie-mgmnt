@@ -218,7 +218,7 @@ $("#cookie-save-button").html(cookieSidebarSaveButton);
 
 
 var cookieSidebarPoweredBy = ""
-cookieSidebarPoweredBy = cookieSidebarPoweredBy + 'Powered by <strong>iGrant.io</strong>';
+cookieSidebarPoweredBy = cookieSidebarPoweredBy + 'Powered by <a href="https://igrant.io/" style="color :rgba(0, 0, 0, 0.733);text-decoration:none;"> <strong>iGrant.io</strong></a>';
 $("#powered-by").html(cookieSidebarPoweredBy);
 
 var cookieBannerText="";
