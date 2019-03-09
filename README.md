@@ -41,7 +41,7 @@
 
 ### Calling the consent banners from your web files
 
-1. Copy the head scripts from **cookie.html** to the pages where the Cookie Consent is required. You can ignore the first two scripts if already using Bootstrap and jQuery in you webpage.
+1. Copy the head scripts from **cookie.html** to the pages where the Cookie Consent is required. You can ignore the first two scripts if already using jQuery and Bootstrap in you webpage.
 
 **Head Scripts**
 ```html
@@ -59,7 +59,7 @@
 
 1. Download the Cookie Consent directory files and put it the “Source/src” folder of your project where the index page resides. Make the folder name as "cookie-mgmnt".
 
-2. Copy the head scripts from cookie.html to the pages where the Cookie Consent is required. 
+2. Copy the head scripts from cookie.html to the pages where the Cookie Consent is required. You can ignore the first two scripts if already using jQuery and Bootstrap in you webpage.
 ```html
    	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
