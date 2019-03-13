@@ -51,7 +51,8 @@
 
 			if( ifmobile=="true" ) {
 				
-				this.trigger.addEventListener( 'click', function(ev) { self._openIconMenu(); vendor_hide();} );
+				this.trigger.addEventListener( 'click', function(ev) { self._openIconMenu(); vendor_hide();
+					document.getElementById("cookie-consent-sidebar").style.display = 'block';} );
 				this.trigger.addEventListener( 'click', function(ev) { self._closeIconMenu(); } );
 				this.save.addEventListener( 'click', function(ev) { self._closeMenu(); saveConsent();} );
 				this.cookie_cancel.addEventListener( 'click', function(ev) { self._closeMenu(); } );
@@ -67,8 +68,9 @@
 				}
 				else {
 					vendor_hide();
-					vendorActivate();
+					document.getElementById("cookie-consent-sidebar").style.display = 'block';
 					checkAnalytical();
+					vendorActivate();
 					self._openMenu();
 					document.addEventListener( self.eventtype, self.bodyClickFn );
 				}
@@ -81,7 +83,10 @@
 			} );
 			this.manage.addEventListener( this.eventtype, function(ev) { 
 				document.getElementById("fixedBottomNav").style.display = 'none';
+				document.getElementById("cookie-consent-sidebar").style.display = 'block';
+				checkAnalytical();
 				vendorActivate();
+				vendor_hide();
 				self._openMenu();
 			} );
 			}

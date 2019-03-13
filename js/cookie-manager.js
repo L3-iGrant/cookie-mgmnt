@@ -135,7 +135,7 @@ function addPrivacy()
 
         var is_required= Config.purposes[i].required;
         var cookies_length=Config.purposes[i].cookies.length
-        if(is_required){
+        if(is_required=="true"){
            for(j=0;j < cookies_length;j++)
            {
                var cookie = Config.purposes[i].cookies[j];
