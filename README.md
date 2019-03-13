@@ -72,7 +72,21 @@
 
 3. Use the config.js file to configure the Cookie consent banner and sidebar of your own choice.
 
+## Overall WWW tree installation structure example.
 
+The following describes the basic tree structure on the respective WWW server end terms of basic installation
+
+ - [**www root**] root folder of WWW directory - HTML with Head Scripts indicated above
+	- [**JS**] Java Script - Folder containing JS files underneath [**www root**]
+	- [**CSS**] Folder containing CSS files underneath [**www root**]
+
+Therefore, this folder structure becomes:
+
+    + ROOT
+	    - JS
+	    - CSS
+
+**If the folder structure is changed, then the scripts need to reflect the respective path/url etc. changes otherwise you may run into problems.**
 
 
 
