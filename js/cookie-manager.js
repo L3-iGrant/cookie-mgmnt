@@ -203,6 +203,7 @@ function vendor_show(){
 }
 
 function vendor_hide(){
+    document.getElementById("cookie-consent-sidebar").style.display="block";
     document.getElementById("vendor_show_text").style.display="block";
     document.getElementById("vendor_hide_text").style.display="none";
     document.getElementById("purposes_scroll").style.display="block";
