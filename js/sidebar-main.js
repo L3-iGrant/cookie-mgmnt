@@ -56,6 +56,14 @@
 				this.trigger.addEventListener( 'click', function(ev) { self._closeIconMenu(); } );
 				this.save.addEventListener( 'click', function(ev) { self._closeMenu(); saveConsent();} );
 				this.cookie_cancel.addEventListener( 'click', function(ev) { self._closeMenu(); } );
+				this.manage.addEventListener( this.eventtype, function(ev) { 
+					document.getElementById("fixedBottomNav").style.display = 'none';
+					document.getElementById("cookie-consent-sidebar").style.display = 'block';
+					checkAnalytical();
+					vendorActivate();
+					vendor_hide();
+					self._openMenu();
+				} );
 			}
 			else{
 				
