@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cookie consent manager - iGrant.io</title>
+</head>
+<body>
+<script src="cookieconsent.min.js"></script>
+<script>
+    /**
+     * Cookie types
+     *
+     * 1.Unclassified cookies
+     * 2.Preference cookies
+     * 3.Statistics cookies
+     * 4.Marketing cookies
+     * 5.Essential cookies
+     */
+    var config = {
+        "apiKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUeXBlIjoiQ09PS0lFX0NPTlNFTlQiLCJvcmdpZCI6IjVkZjRkYTcwMzVmMDNmMDAwMTRjMDRkYyIsImV4cCI6MjA0Mjk3MDI5OH0.xXxRLx1U-BrFhEMiLxyVYlc-txzwlBF_kpKMgA1_WBc",
+        "onConsent": function (cookieType) {
+            console.log("[USER CONSENTED] -> ", cookieType);
+            if (cookieType.trim() === "Marketing cookies") {
+                (function (w, d, s, l, i) {
+                    w[l] = w[l] || [];
+                    w[l].push({
+                        'gtm.start':
+                            new Date().getTime(), event: 'gtm.js'
+                    });
+                    var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                    j.async = true;
+                    j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                    f.parentNode.insertBefore(j, f);
+                })(window, document, 'script', 'dataLayer', 'GTM-N4VZD77');
+            }
+        },
+        "onConsentRevoke": function (cookieType) {
+            console.log("[USER CONSENT REVOKED] -> ", cookieType);
+
+            if (cookieType.trim() === "Marketing cookies") {
+
+            }
+        }
+    };
+    new CookieConsentManager(config);
+</script>
+</body>
+</html>

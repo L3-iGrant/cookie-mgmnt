@@ -1,0 +1,41 @@
+{
+  "name": "cookie-consent-manager",
+  "version": "0.0.1",
+  "description": "An iGrant.io plugin to manage cookie consents in a GDPR compliant manner.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development --config webpack.dev.js --watch --display-modules",
+    "prod": "webpack --mode production --config webpack.prod.js"
+  },
+  "keywords": [
+    "gdpr",
+    "cookie",
+    "cookiemanagement",
+    "iab"
+  ],
+  "author": "iGrant.io",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "babel-minify-webpack-plugin": "^0.3.1",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.4.0",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-prettier": "^3.1.1",
+    "file-loader": "^5.0.2",
+    "jquery": "^3.4.1",
+    "lodash-es": "^4.17.15",
+    "node-sass": "^4.13.0",
+    "prettier": "^1.19.1",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}
