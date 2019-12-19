@@ -1,94 +1,90 @@
-# Manage Consent Cookies as per IAB/GDPR Transparency and Consent Framework
+# Cookie Consent Manager
 
-# Usage Instructions for developers
+**Cookie Consent Manager** is a lightweight JavaScript plugin for alerting users about the use of cookies on your website.
 
-### Getting Set Up
+It is designed to help you quickly comply with IAB/GDPR transparency and consent framework. We made it fast, free, and relatively painless.
 
-1. Fork this repository on GitHub as part of your project. You can fork by clicking on "Fork" on the top right corner:
+We welcome community contributions and actively review pull requests.
 
-![](githubfork.png)
+## Screenshot
 
-2. Clone your forked repository (not our original one) to your hard drive with git clone `https://github.com/YOURUSERNAME/cookie-mgmnt.git` 
-   
-   The clone directory is: 
-  `https://github.com/L3-iGrant/cookie-mgmnt.git`
+![CookieConsentManager__Sidebar](./screenshots/sideBar.png "Cookie Consent Manager Sidebar")
 
-3. `cd cookie-mgmnt/js`
-	
-	Use the `config.js` file to configure the Cookie consent banner of your choice. You are able to modify the text and headings etc using this config file. The table below summarises the variables used and its description.
+![CookieConsentManager__BottomBanner](./screenshots/bottomBanner.png "Cookie Consent Manager Bottom Banner" )
 
-	| Variable Name | Description |
-	|---|----|
-	| companyName | Name of the company/organization |
-	| cookieBannerHeader | Header for the Cookie Banner |
-	| cookieBannerDescription | Description text for the Cookie Banner |
-	| cookieConsentSidebarMainText| Top description text for the Cookie manager sidebar |
-	| cookieConsentSidebarSubTitle| Sub Heading for the Cookie manager sidebar|
-	| cookieConsentSidebarSubDescription| Sub Heading Description for the Cookie manager sidebar|
-	| privacyPolicy| Path to the privacy policy file eg.`privacy.html`|
-	| cookiePolicy| Path to the cookie policy file eg.`cookiePolicy.html`|
-	| numberOfPurposes| Number of purposes/cookie apps used|
+## Advantages
 
-	Below is the description on how to fill the details of Purposes/cookie apps which are used.
+* **Free and Open Source**
+* **Easy to use**
+* **Flexible and customizable**: Manage consent for all possible types of
+  third-party apps and easily customize the tool according to your needs.
+* **Small footprint**
 
-	| Purpose Variable| Description |
-	|---|----|
-	| name | Each app/purpose should have unique name to be identified |
-	| cookietitle | Name of the purpose. This will be shown in the manager as purpose title|
-	| description | Description about the purpose|
-	| cookies | Mention which cookies are used for this purpose|
-	| required | Value- `true` or `false` If true, user won't be able to disable the cookie of this purpose.|
+## Beginning your configuration
 
-### Calling the consent banners from your web files
+You define (and create) your own configuration as a JavaScript Object, containing as many properties as you deem necessary.
 
-1. Copy the head scripts from **cookie.html** to the pages where the Cookie Consent is required. You can ignore the first two scripts if already using jQuery and Bootstrap in you webpage.
+To get started, **apiKey** can be obtained from iGrant.io enterprise dashboard. If the cookie consent manager is configured as below, then the basic configuration and cookie purposes will be displayed as configured from iGrant.io enterprise dashboard. 
 
-**Head Scripts**
 ```html
-   	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-
-	<script type="text/javascript" src="cookie-mgmnt/js/cookie_consent_headtags.js"></script>
-	<script type="text/javascript" src="cookie-mgmnt/js/cookie_consent_body.js"></script>
-	
+<!-- Latest Version -->
+<script src="https://cdn.jsdelivr.net/gh/L3-iGrant/cookie-mgmnt/build/cookieconsent.min.js" type="text/javascript"></script>
+<script>
+    var config = {
+        "apiKey": "",
+        "onConsent": function (cookieType) {},
+        "onConsentRevoke": function (cookieType) {}
+    };
+    new CookieConsentManager(config);
+</script>
 ```
 
-## SetUp for non-gitHub users or non-developers
-**Recommendations to Install or implement cookie consents using iGrant.io provided framework:**
+If you don't have an API key, there is manual configuration mode where basic configuration and cookie purposes are passed through configuration object. Below is an example,
 
-1. Download the Cookie Consent directory files and put it the “Source/src” folder of your project where the index page resides. Make the folder name as "cookie-mgmnt".
-
-2. Copy the head scripts from cookie.html to the pages where the Cookie Consent is required. You can ignore the first two scripts if already using jQuery and Bootstrap in you webpage.
 ```html
-   	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-	
-	<script type="text/javascript" src="cookie-mgmnt/js/cookie_consent_headtags.js"></script>
-	<script type="text/javascript" src="cookie-mgmnt/js/cookie_consent_body.js"></script>
-	
+<!-- Latest Version -->
+<script src="https://cdn.jsdelivr.net/gh/L3-iGrant/cookie-mgmnt/build/cookieconsent.min.js" type="text/javascript"></script>
+<script>
+    var config = {
+        "apiKey": "",
+        "onConsent": function (cookieType) {},
+        "onConsentRevoke": function (cookieType) {},
+        "basic": {
+            "BannerHeader": "YOUR DATA, YOUR CHOICE",
+            "BannerDescription": "uses cookies to enhance your experience of our website. By clicking Allow, you are consenting to the use of cookies.",
+            "SidebarMainText": "uses cookies to enhance your experience of our website. By allowing, you are consenting to the use of cookies.",
+            "SidebarSubtitle": "Manage Cookie Preferences",
+            "SidebarSubDescription": "You can set your consent preferences based on the purposes below.",
+            "CookiePolicyURL": "privacy.html",
+            "CompanyPolicyURL": "",
+            "CompanyName": "XYZ India Limited"
+        },
+        "cookiePurposes": [
+            {
+                "Title": "Google Adsense",
+                "CookieTypeName": "Marketing cookies",
+                "Description": "For displaying advertisment using Google Adsense to gain revenue",
+                "BrowserCookies": [
+                    "_gat",
+                    "_gid"
+                ],
+                "IsRequired": false
+            },
+            {
+                "Title": "Stripe",
+                "CookieTypeName": "Essential cookies",
+                "Description": "For integrating stripe payment gateway",
+                "BrowserCookies": [
+                    "__stripe_mid"
+                ],
+                "IsRequired": true
+            }
+        ]
+    };
+    new CookieConsentManager(config);
+</script>
 ```
 
-3. Use the config.js file to configure the Cookie consent banner and sidebar of your own choice.
+## Contributing
 
-## Overall WWW tree installation structure example.
-
-The following describes the basic tree structure on the respective WWW server end terms of basic installation
-
- - [**www root**] root folder of WWW directory - HTML with Head Scripts indicated above
-	- [**JS**] Java Script - Folder containing JS files underneath [**www root**]
-	- [**CSS**] Folder containing CSS files underneath [**www root**]
-
-Therefore, this folder structure becomes:
-
-    + ROOT
-	    - JS
-	    - CSS
-
-**If the folder structure is changed, then the scripts need to reflect the respective path/url etc. changes otherwise you may run into problems.**
-
-
-
-
-
+Feel free to improve the plugin and send us a pull request. 

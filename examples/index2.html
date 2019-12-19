@@ -17,6 +17,7 @@
      * 5.Essential cookies
      */
     var config = {
+        "apiKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJUeXBlIjoiQ09PS0lFX0NPTlNFTlQiLCJvcmdpZCI6IjVkZjRkYTcwMzVmMDNmMDAwMTRjMDRkYyIsImV4cCI6MjA0Mjk3MDI5OH0.xXxRLx1U-BrFhEMiLxyVYlc-txzwlBF_kpKMgA1_WBc",
         "onConsent": function (cookieType) {
             console.log("[USER CONSENTED] -> ", cookieType);
             if (cookieType.trim() === "Marketing cookies") {
@@ -41,38 +42,7 @@
             if (cookieType.trim() === "Marketing cookies") {
 
             }
-        },
-        "basic": {
-            "BannerHeader": "YOUR DATA, YOUR CHOICE",
-            "BannerDescription": "uses cookies to enhance your experience of our website. By clicking Allow, you are consenting to the use of cookies.",
-            "SidebarMainText": "uses cookies to enhance your experience of our website. By allowing, you are consenting to the use of cookies.",
-            "SidebarSubtitle": "Manage Cookie Preferences",
-            "SidebarSubDescription": "You can set your consent preferences based on the purposes below.",
-            "CookiePolicyURL": "privacy.html",
-            "CompanyPolicyURL": "",
-            "CompanyName": "XYZ India Limited"
-        },
-        "cookiePurposes": [
-            {
-                "Title": "Google Adsense",
-                "CookieTypeName": "Marketing cookies",
-                "Description": "For displaying advertisment using Google Adsense to gain revenue",
-                "BrowserCookies": [
-                    "_gat",
-                    "_gid"
-                ],
-                "IsRequired": false
-            },
-            {
-                "Title": "Stripe",
-                "CookieTypeName": "Essential cookies",
-                "Description": "For integrating stripe payment gateway",
-                "BrowserCookies": [
-                    "__stripe_mid"
-                ],
-                "IsRequired": true
-            }
-        ]
+        }
     };
     new CookieConsentManager(config);
 </script>
