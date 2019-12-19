@@ -6,7 +6,7 @@ It is designed to help you quickly comply with IAB/GDPR transparency and consent
 
 We welcome community contributions and actively review pull requests.
 
-## Screenshot
+## Screenshots
 
 ![CookieConsentManager__Sidebar](./screenshots/sideBar.png "Cookie Consent Manager Sidebar")
 
@@ -20,7 +20,7 @@ We welcome community contributions and actively review pull requests.
   third-party apps and easily customize the tool according to your needs.
 * **Small footprint**
 
-## Beginning your configuration
+## Configuration
 
 You define (and create) your own configuration as a JavaScript Object, containing as many properties as you deem necessary.
 
