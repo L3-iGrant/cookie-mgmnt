@@ -46,7 +46,6 @@ If you don't have an API key, there is manual configuration mode where basic con
 <script src="https://cdn.jsdelivr.net/gh/L3-iGrant/cookie-mgmnt/build/cookieconsent.min.js" type="text/javascript"></script>
 <script>
     var config = {
-        "apiKey": "",
         "onConsent": function (cookieType) {},
         "onConsentRevoke": function (cookieType) {},
         "basic": {
