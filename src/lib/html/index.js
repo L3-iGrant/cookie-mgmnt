@@ -375,6 +375,9 @@ export const CookieSidebarVendorAndPurposesHTML = (
     '<div class="col-sm-12" id="purposes_scroll">';
 
   for (let i = 0; i < Object.keys(transformedPurposes).length; i++) {
+
+    console.log(transformedPurposes);
+
     if (transformedPurposes[Object.keys(transformedPurposes)[i]].length === 0)
       continue;
 

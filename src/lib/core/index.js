@@ -300,19 +300,7 @@ export const checkAllCookiesAccepted = (transformedPurposes, config = null) => {
     });
     let isAccepted = true;
     if (!(getCookie("Essential cookies").trim() === "accepted")) {
-        for (let i = 0; i < cookieTypes.length; i++) {
-            const cookieValue = getCookie(cookieTypes[i]);
-
-            if (cookieValue) {
-                if (cookieValue !== "accepted") {
-                    isAccepted = false;
-                    break;
-                }
-            } else {
-                isAccepted = false;
-                break;
-            }
-        }
+        isAccepted = false;
     }
 
     if (isAccepted) {
@@ -342,7 +330,22 @@ export const TransformPurposes = (purposes, purposeTypes) => {
             .trim()
             .split(" ")
             .join("-");
+        purposesNew[purpose["CookieTypeName"]] = [];
+        console.log(purpose);
+    });
+
+    purposes.forEach(purpose => {
+        purpose["Title"] = purpose["Title"]
+            .trim()
+            .split(" ")
+            .join("-");
+        purpose["ClassName"] = purpose["CookieTypeName"]
+            .trim()
+            .split(" ")
+            .join("-");
+
         purposesNew[purpose["CookieTypeName"]].push(purpose);
+        console.log(purposesNew);
     });
 
     return purposesNew;
@@ -360,6 +363,10 @@ export const TransformPurposesToBrowserCookiesArray = (
     for (let i = 0; i < purposeTypes.length; i++) {
         purposesNew[purposeTypes[i]] = [];
     }
+
+    purposes.forEach(purpose => {
+        purposesNew[purpose["CookieTypeName"]] = [];
+    });
 
     purposes.forEach(purpose => {
         const BrowserCookies = purpose["BrowserCookies"];
