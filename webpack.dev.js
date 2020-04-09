@@ -3,7 +3,7 @@ const path = require("path");
 module.exports = {
     entry: "./src/index.js",
     output: {
-        filename: "cookieconsent.js",
+        filename: "cookieconsent.min.js",
         path: path.resolve(__dirname, "dist")
     },
     module: {

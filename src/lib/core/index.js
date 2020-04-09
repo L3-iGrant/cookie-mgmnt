@@ -375,6 +375,7 @@ export const TransformPurposesToBrowserCookiesArray = (
  * Actions to performed on manage button click
  */
 export const ShowCookieSidebar = () => {
+    console.log("Clicked");
     document.getElementById("fixedBottomNav").style.display = "none";
     document.getElementById("cookie-consent-sidebar").style.display = "block";
 };

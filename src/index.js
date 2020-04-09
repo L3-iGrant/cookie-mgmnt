@@ -85,7 +85,7 @@ import {ExecuteOnConsentHookOnPageLoad, validateManualConfig} from "./lib/core";
                 xhr.send();
             } else {
 
-                console.log(this.c)
+                console.log(this.c);
 
                 this._initData(this.ccmConfig["manualConfig"], this.ccmConfig);
             }
@@ -209,6 +209,7 @@ import {ExecuteOnConsentHookOnPageLoad, validateManualConfig} from "./lib/core";
                     self._closeMenu();
                 });
                 this.manage.addEventListener(this.eventType, function () {
+                    console.log("Clicked");
                     ShowCookieSidebar();
                     ToggleCookiePurposes(transformedPurposes);
                     showVendorLink(true);
