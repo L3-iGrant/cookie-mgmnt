@@ -102,7 +102,7 @@ import {ExecuteOnConsentHookOnPageLoad, validateManualConfig} from "./lib/core";
             ExecuteOnConsentHookOnPageLoad(this.transformedPurposes, ccmConfig);
 
             // populating bottom banner HTML
-            document.querySelector("body").innerHTML += BottomBannerHTML;
+            document.querySelector("body").innerHTML = BottomBannerHTML + document.querySelector("body").innerHTML;
 
             // Bottom banner container div
             this.el = document.getElementById("gn-menu");
