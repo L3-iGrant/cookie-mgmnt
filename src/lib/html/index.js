@@ -238,18 +238,18 @@ export const CookieSidebarVendorAndPurposesHTML = (
     vendorListVersion: 0,
     vendors: []
   };
-  const xhr = new XMLHttpRequest();
-  xhr.onload = () => {
-    if (xhr.status >= 200 && xhr.status < 300) {
-      vendor_list = JSON.parse(xhr.responseText);
-      vendorListHTML(vendor_list);
-    } else {
-      console.log("Unable to retrieve vendor list : ", xhr.responseText);
-    }
-  };
-
-  xhr.open("GET", IAB_VENDORS_URL);
-  xhr.send();
+  // const xhr = new XMLHttpRequest();
+  // xhr.onload = () => {
+  //   if (xhr.status >= 200 && xhr.status < 300) {
+  //     vendor_list = JSON.parse(xhr.responseText);
+  //     vendorListHTML(vendor_list);
+  //   } else {
+  //     console.log("Unable to retrieve vendor list : ", xhr.responseText);
+  //   }
+  // };
+  //
+  // xhr.open("GET", IAB_VENDORS_URL);
+  // xhr.send();
 
   for (let i = 0; i < vendor_list.vendors.length; i++) {
     cookieSidebarText =
