@@ -1,4 +1,20 @@
-# Cookie Consent Manager
+<h1 align="center">
+    Cookie Consent Manager
+</h1>
+
+<p align="center">
+    <a href="/../../commits/" title="Last Commit"><img src="https://img.shields.io/github/last-commit/L3-iGrant/cookie-mgmnt?style=flat"></a>
+    <a href="/../../issues" title="Open Issues"><img src="https://img.shields.io/github/issues/L3-iGrant/cookie-mgmnt/issues?style=flat"></a>
+    <a href="./LICENSE" title="License"><img src="https://img.shields.io/badge/License-Apache%202.0-green.svg?style=flat"></a>
+</p>
+
+<p align="center">
+  <a href="#about">About</a> •
+  <a href="#contributing">Contributing</a> •
+  <a href="#licensing">Licensing</a>
+</p>
+
+## About
 
 **Cookie Consent Manager** is a lightweight JavaScript plugin for alerting users about the use of cookies on your website.
 
@@ -87,10 +103,6 @@ If you don't have an API key, there is manual configuration mode where basic con
 ## Contributing
 
 Feel free to improve the plugin and send us a pull request. If you found any problems, please create an Issue.
-
-## Testing & Status
-
-Current status: Released
 
 ## Licensing
 Copyright (c) 2021 LCubed AB (iGrant.io), Sweden
