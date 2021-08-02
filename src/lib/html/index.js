@@ -16,7 +16,7 @@ import { IAB_VENDORS_URL } from "../config/api";
  * Bottom banner html code
  */
 export const BottomBannerHTML =
-  '<div style=" position:fixed; z-index:9999999999;">' +
+  '<div class="cookie-mgt" style=" position:fixed; z-index:9999999999;">' +
   '<div class="sidebar" id="sidebar">' +
   '<div id="gn-menu" class="gn-menu-main" >' +
   '<a class="gn-icon-menu" id="cookieConsentAlwaysOnButton"></a>' +

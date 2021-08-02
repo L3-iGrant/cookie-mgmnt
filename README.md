@@ -44,7 +44,7 @@ To get started, **apiKey** can be obtained from iGrant.io enterprise dashboard. 
 
 ```html
 <!-- Latest Version -->
-<script src="https://cdn.jsdelivr.net/gh/L3-iGrant/cookie-mgmnt/build/cookieconsent.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/gh/L3-iGrant/cookie-mgmnt/dist/cookieconsent.min.js" type="text/javascript"></script>
 <script>
     var config = {
         "apiKey": "",
@@ -59,7 +59,7 @@ If you don't have an API key, there is manual configuration mode where basic con
 
 ```html
 <!-- Latest Version -->
-<script src="https://cdn.jsdelivr.net/gh/L3-iGrant/cookie-mgmnt/build/cookieconsent.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/gh/L3-iGrant/cookie-mgmnt/dist/cookieconsent.min.js" type="text/javascript"></script>
 <script>
     var config = {
         "onConsent": function (cookieType) {},
