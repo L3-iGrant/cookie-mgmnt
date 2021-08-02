@@ -6,6 +6,7 @@
     <a href="/../../commits/" title="Last Commit"><img src="https://img.shields.io/github/last-commit/L3-iGrant/cookie-mgmnt?style=flat"></a>
     <a href="/../../issues" title="Open Issues"><img src="https://img.shields.io/github/issues/L3-iGrant/cookie-mgmnt?style=flat"></a>
     <a href="./LICENSE" title="License"><img src="https://img.shields.io/badge/License-Apache%202.0-green.svg?style=flat"></a>
+    [![](https://data.jsdelivr.com/v1/package/gh/L3-iGrant/cookie-mgmnt/badge)](https://www.jsdelivr.com/package/gh/L3-iGrant/cookie-mgmnt)
 </p>
 
 <p align="center">
@@ -44,7 +45,7 @@ To get started, **apiKey** can be obtained from iGrant.io enterprise dashboard. 
 
 ```html
 <!-- Latest Version -->
-<script src="https://cdn.jsdelivr.net/gh/L3-iGrant/cookie-mgmnt/dist/cookieconsent.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/gh/L3-iGrant/cookie-mgmnt@1.0.6/dist/cookieconsent.min.js" type="text/javascript"></script>
 <script>
     var config = {
         "apiKey": "",
@@ -59,7 +60,7 @@ If you don't have an API key, there is manual configuration mode where basic con
 
 ```html
 <!-- Latest Version -->
-<script src="https://cdn.jsdelivr.net/gh/L3-iGrant/cookie-mgmnt/dist/cookieconsent.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/gh/L3-iGrant/cookie-mgmnt@1.0.6/dist/cookieconsent.min.js" type="text/javascript"></script>
 <script>
     var config = {
         "onConsent": function (cookieType) {},
