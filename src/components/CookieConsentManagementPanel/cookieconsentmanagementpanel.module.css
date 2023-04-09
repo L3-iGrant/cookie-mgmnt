@@ -1,0 +1,75 @@
+@import "./../../global.module.css";
+
+@layer utilities {
+    .panel-btn {
+        @apply transition-colors mt-[10px] lg:mt-[0px] ml-[5px] inline-block tracking-[2px] font-[Raleway] font-normal rounded-full border border-[#dfdfdf] border-solid bg-white px-[25px] py-[5px] text-[14px] text-black hover:bg-black hover:text-white focus:outline-none focus:ring cursor-pointer;
+    }
+
+    .panel-container {
+        @apply bg-white min-h-[100vh] min-w-full sm:min-w-[400px] sm:max-w-[400px]  text-[#595959] fixed top-0 left-0 z-[99999999999] text-[13px] font-[Roboto] tracking-[0.5px] leading-[1.45] text-justify overflow-y-auto border-r border-y-0 border-l-0 border-[#dfdfdf] border-solid;
+    }
+
+    .panel-body {
+        @apply px-[30px] pt-[35px];
+    }
+
+    .panel-title {
+        @apply text-[18px] font-[Raleway] tracking-[1px] [word-spacing:3px] text-black text-left sm:text-justify;
+    }
+
+    .panel-description{
+        @apply font-[Roboto] text-[13px] mt-[16px] tracking-[0.5px] leading-[1.45] text-justify;
+    }
+
+    .link {
+        @apply text-[#337ab7] no-underline visited:text-[#337ab7] visited:no-underline active:text-[#337ab7] active:no-underline hover:text-[#337ab7] hover:no-underline;
+    }
+
+    .panel-powered-by-company {
+        @apply font-[Roboto] text-[13px] text-center mt-[20px] mb-[20px];
+    }
+
+    .powered-by-company-link {
+        @apply text-black no-underline visited:text-black visited:no-underline active:text-black active:no-underline hover:text-black hover:no-underline;
+    }
+
+    .panel-allow-all-btn, .panel-cancel-save-btns {
+        @apply flex justify-end;
+    }
+
+    .panel-item-separator-line {
+        @apply border-t border-b-0 border-x-0 border-solid border-[#cfcfcf] my-[20px];
+    }
+
+    .panel-consent-checkbox {
+        @apply border-gray-300 rounded h-5 w-5 checked:accent-black;
+    }
+
+    .panel-cookie-consent-item-body {
+        @apply flex justify-center items-center;
+    }
+    
+    .panel-cookie-consent-item-cookies-used {
+        @apply mt-[3px] text-[10px];
+    }
+
+    .panel-cookie-consent-item-description {
+        @apply basis-[80%];
+    }
+
+    .panel-cookie-consent-item-checkbox {
+        @apply basis-[20%] flex items-center justify-center;
+    }
+
+    .panel-cookie-consent-item-title {
+        @apply font-bold;
+    }
+
+    .panel-cookie-consent-item-container {
+        @apply overflow-y-auto max-h-[270px];
+    }
+
+    .panel-cancel-save-btns {
+        @apply mt-[20px];
+    }
+}
