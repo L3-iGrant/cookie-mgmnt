@@ -1,0 +1,40 @@
+@import "./../../global.module.css";
+
+@layer utilities {
+    .banner-container {
+        @apply py-0 px-[15px] bg-white text-black;
+    }
+
+    .cookie-consent-ui-container {
+        @apply flex min-w-full mx-0 my-auto pt-[10px] px-0 pb-[40px] font-[Raleway] bg-white border-t border-x-0 border-b-0 border-[#dfdfdf] border-solid fixed bottom-0 left-0 z-[99999999999];
+    }
+
+    .cookie-consent-ui-body {
+        @apply container mx-auto max-w-[1152px];
+    }
+
+    .banner-title {
+        @apply mb-[10px] text-[18px] font-normal uppercase tracking-[3px] [word-spacing:3px] text-justify;
+    }
+
+    .banner-body {
+        @apply flex flex-col lg:flex-row;
+    }
+
+    .banner-body-consent-text {
+        @apply text-[13px] leading-[24px] text-justify lg:basis-[60%];
+    }
+
+    .banner-body-consent-actions {
+        @apply flex flex-col lg:flex-row justify-evenly items-end lg:items-start lg:justify-end lg:basis-[40%];
+    }
+
+    .consent-action-btn {
+        @apply transition-colors mt-[10px] lg:mt-[0px] lg:ml-[10px] inline-block tracking-[2px] font-[Raleway] font-normal rounded-full border border-[#dfdfdf] border-solid bg-white px-[25px] py-[5px] text-[14px] text-black hover:bg-black hover:text-white focus:outline-none focus:ring cursor-pointer;
+    }
+
+    .link {
+        @apply text-[#337ab7] no-underline visited:text-[#337ab7] visited:no-underline active:text-[#337ab7] active:no-underline hover:text-[#337ab7] hover:no-underline;
+    }
+    
+}
