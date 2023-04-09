@@ -1,0 +1,7 @@
+@import "./../../global.module.css";
+
+@layer utilities {
+    .cookie-consent-btn {
+        @apply mt-[10px] lg:mt-[0px] lg:ml-[10px] inline-block tracking-[2px] font-[Raleway] font-normal rounded-full border border-[#dfdfdf] border-solid bg-black px-[10px] py-[5px] text-[9px] text-white focus:outline-none focus:ring cursor-pointer fixed bottom-[15px] left-[10px] z-[99999999999];
+    }
+}
