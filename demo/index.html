@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo: iGrant.io Cookie Consent UI</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/L3-iGrant/cookie-mgmnt@2.0.3/dist/cookie-consent-ui.css" />
+  </head>
+  <body style="margin: 20px 0px; background-color: wheat">
+    <div id="ccui"></div>
+
+    <script
+    type="application/javascript"
+      id="cookie-consent-ui"
+      data-element-id="ccui"
+      data-banner-title="YOUR DATA, YOUR CHOICE"
+      data-banner-company-name="iGrant.io"
+      data-banner-company-link="https://igrant.io"
+      data-banner-cookie-policy-link="https://igrant.io/privacy.html"
+      data-banner-privacy-policy-link="https://igrant.io/privacy.html#privacy"
+      src="https://cdn.jsdelivr.net/gh/L3-iGrant/cookie-mgmnt@2.0.3/dist/cookie-consent-ui.js"
+    ></script>
+    <script>
+      window.CookieConsentUI([
+        {
+          consent: true,
+          cookieCategory: "Essential Cookies",
+          cookieCategoryDescription:
+            "are necessary for this site to function properly, authenticating logins, for instance. You can only disable essential cookies via browser settings.",
+          cookiesUsed: ["PrivacyPolicy"],
+          isMandatory: true
+        },
+        {
+          consent: true,
+          cookieCategory: "Analytical Cookies",
+          cookieCategoryDescription:
+            "provide information about how this site is being used so we can improve your experience. Data captured is aggregated and anonymized.",
+          cookiesUsed: ["Analytics", "_ga", "_gid", "_gat"],
+          isMandatory: false
+        },
+        {
+          consent: false,
+          cookieCategory: "Advertising Cookies",
+          cookieCategoryDescription:
+            "are used for contextual ads from third parties.",
+          cookiesUsed: ["AdSense"],
+          isMandatory: false
+        },
+      ]);
+    </script>
+  </body>
+</html>
