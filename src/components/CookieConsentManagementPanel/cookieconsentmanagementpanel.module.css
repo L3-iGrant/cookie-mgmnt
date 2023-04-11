@@ -2,7 +2,7 @@
 
 @layer utilities {
     .panel-btn {
-        @apply transition-colors mt-[10px] lg:mt-[0px] ml-[5px] inline-block tracking-[2px] font-[Raleway] font-normal rounded-full border border-[#dfdfdf] border-solid bg-white px-[25px] py-[5px] text-[14px] text-black hover:bg-black hover:text-white focus:outline-none focus:ring cursor-pointer;
+        @apply transition-colors mt-[10px] lg:mt-[0px] ml-[5px] inline-block tracking-[2px] font-[Raleway] font-normal rounded-full border border-[#dfdfdf] border-solid bg-white px-[25px] py-[5px] text-[14px] text-black hover:bg-black hover:no-underline hover:text-white focus:outline-none focus:ring cursor-pointer;
     }
 
     .panel-container {
@@ -42,7 +42,7 @@
     }
 
     .panel-consent-checkbox {
-        @apply border-gray-300 rounded h-5 w-5 checked:accent-black;
+        @apply border-gray-300 rounded h-5 w-5 checked:accent-black checked:text-black;
     }
 
     .panel-cookie-consent-item-body {
