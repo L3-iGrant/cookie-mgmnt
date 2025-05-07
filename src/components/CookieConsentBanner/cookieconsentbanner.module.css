@@ -6,7 +6,7 @@
     }
 
     .cookie-consent-ui-container {
-        @apply flex min-w-full mx-0 my-auto pt-[10px] px-0 pb-[40px] font-[Raleway] bg-white border-t border-x-0 border-b-0 border-[#dfdfdf] border-solid fixed bottom-0 left-0 z-[99999999999];
+        @apply flex min-w-full mx-0 my-auto pt-[10px] px-0 pb-[40px] font-heading bg-white border-t border-x-0 border-b-0 border-[#dfdfdf] border-solid fixed bottom-0 left-0 z-[99999999999];
     }
 
     .cookie-consent-ui-body {
@@ -14,7 +14,7 @@
     }
 
     .banner-title {
-        @apply mb-[10px] text-[18px] font-normal uppercase tracking-[3px] [word-spacing:3px] text-justify;
+        @apply mb-[10px] text-[20px] font-normal uppercase tracking-[3px] [word-spacing:3px] text-left;
     }
 
     .banner-body {
@@ -22,7 +22,7 @@
     }
 
     .banner-body-consent-text {
-        @apply text-[13px] leading-[24px] text-justify lg:basis-[60%];
+        @apply text-[16px] leading-[24px] text-justify lg:basis-[60%];
     }
 
     .banner-body-consent-actions {
@@ -30,7 +30,7 @@
     }
 
     .consent-action-btn {
-        @apply transition-colors mt-[10px] lg:mt-[0px] lg:ml-[10px] inline-block tracking-[2px] font-[Raleway] font-normal rounded-full border border-[#dfdfdf] border-solid bg-white px-[25px] py-[5px] text-[14px] text-black hover:bg-black hover:text-white hover:no-underline focus:outline-none focus:ring cursor-pointer;
+        @apply transition-colors mt-[10px] lg:mt-[0px] lg:ml-[10px] inline-block tracking-[2px] font-heading font-normal rounded-full border border-[#dfdfdf] border-solid bg-white px-[25px] py-[5px] text-[14px] text-black hover:bg-black hover:text-white hover:no-underline focus:outline-none focus:ring cursor-pointer;
     }
 
     .link {
