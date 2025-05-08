@@ -2,11 +2,11 @@
 
 @layer utilities {
     .panel-btn {
-        @apply transition-colors mt-[10px] lg:mt-[0px] ml-[5px] inline-block tracking-[2px] font-[Raleway] font-normal rounded-full border border-[#dfdfdf] border-solid bg-white px-[25px] py-[5px] text-[14px] text-black hover:bg-black hover:no-underline hover:text-white focus:outline-none focus:ring cursor-pointer;
+        @apply transition-colors mt-[10px] lg:mt-[0px] ml-[5px] inline-block tracking-[2px] font-heading font-normal rounded-full border border-[#dfdfdf] border-solid bg-white px-[25px] py-[5px] text-[14px] text-black hover:bg-black hover:no-underline hover:text-white focus:outline-none focus:ring cursor-pointer;
     }
 
     .panel-container {
-        @apply bg-white min-h-[100vh] min-w-full sm:min-w-[400px] sm:max-w-[400px]  text-[#595959] fixed top-0 left-0 z-[99999999999] text-[13px] font-[Roboto] tracking-[0.5px] leading-[1.45] text-justify overflow-y-auto border-r border-y-0 border-l-0 border-[#dfdfdf] border-solid;
+        @apply bg-white min-h-[100vh] min-w-full sm:min-w-[400px] sm:max-w-[410px]  text-[#595959] fixed top-0 left-0 z-[99999999999] text-[16px] font-base tracking-[0.5px] leading-[1.45] text-justify overflow-y-auto border-r border-y-0 border-l-0 border-[#dfdfdf] border-solid;
     }
 
     .panel-body {
@@ -14,11 +14,11 @@
     }
 
     .panel-title {
-        @apply text-[18px] font-[Raleway] tracking-[1px] [word-spacing:3px] text-black text-left sm:text-justify;
+        @apply text-[18px] sm:text-[20px] font-heading tracking-[1px] [word-spacing:3px] text-black text-left;
     }
 
     .panel-description{
-        @apply font-[Roboto] text-[13px] mt-[16px] tracking-[0.5px] leading-[24px] text-justify;
+        @apply font-base text-[16px] mt-[16px] tracking-[0.5px] leading-[24px] text-justify;
     }
 
     .link {
@@ -26,7 +26,7 @@
     }
 
     .panel-powered-by-company {
-        @apply font-[Roboto] text-[13px] text-center mt-[20px] mb-[20px];
+        @apply font-base text-[16px] text-center mt-[20px] mb-[20px];
     }
 
     .powered-by-company-link {
