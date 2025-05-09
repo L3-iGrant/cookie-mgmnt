@@ -3,7 +3,7 @@
 @import"https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap";
 @font-face {
     font-family: Byrd;
-    src: url("/assets/fonts/Byrd-Bold.woff2") format("woff2"), url("/assets/fonts/Byrd-Bold.woff") format("woff");
+    src: url("https://cdn.jsdelivr.net/gh/L3-iGrant/cookie-mgmnt@2025.5.1/public/assets/fonts/Byrd-Bold.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/L3-iGrant/cookie-mgmnt@2025.5.1/public/assets/fonts/Byrd-Bold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -11,7 +11,7 @@
 
 @font-face {
     font-family: Byrd;
-    src: url("/assets/fonts/Byrd-Regular.woff2") format("woff2"), url("/assets/fonts/Byrd-Regular.woff") format("woff");
+    src: url("https://cdn.jsdelivr.net/gh/L3-iGrant/cookie-mgmnt@2025.5.1/public/assets/fonts/Byrd-Regular.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/L3-iGrant/cookie-mgmnt@2025.5.1/public/assets/fonts/Byrd-Regular.woff") format("woff");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
