@@ -88,7 +88,7 @@ Below is an example,
 Feel free to improve the plugin and send us a pull request. If you found any problems, please create an Issue.
 
 ## Licensing
-Copyright (c) 2023 LCubed AB (iGrant.io), Sweden
+Copyright (c) 2023 iGrant Technologies AB (iGrant.io), Sweden
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.
 
